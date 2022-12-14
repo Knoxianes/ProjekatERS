@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qwk11G6z4tNvHFDWU8jNi/V3okBM9U31xPqQnoPMTL1KQnQo9lSsA5WC9/zwVy/iqSlw2XT/tzv1mGo/3cS1fQ==",
+  "dgSpecHash": "sLV6t9VQW+j3Fjs14nenV4yQZcnJR6ByYUEze8boa4QcExhf8za4nl2NuS+T7AXa1Hu3RzdQEYapkeJhzy35kw==",
   "success": true,
-  "projectFilePath": "C:\\Faks\\ProjekatERS\\Power distribution system\\Power distribution system.csproj",
+  "projectFilePath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Power distribution system\\Power distribution system.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\strah\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\strah\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

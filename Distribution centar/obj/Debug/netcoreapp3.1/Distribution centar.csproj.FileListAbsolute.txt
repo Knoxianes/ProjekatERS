@@ -1,0 +1,14 @@
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.exe
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.deps.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.runtimeconfig.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.runtimeconfig.dev.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.pdb
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.csproj.AssemblyReference.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.AssemblyInfoInputs.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.AssemblyInfo.cs
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.csproj.CoreCompileInputs.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.pdb
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.exe
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.deps.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.runtimeconfig.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.runtimeconfig.dev.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.pdb
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.csproj.AssemblyReference.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.AssemblyInfoInputs.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.AssemblyInfo.cs
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.csproj.CoreCompileInputs.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.pdb
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.genruntimeconfig.cache

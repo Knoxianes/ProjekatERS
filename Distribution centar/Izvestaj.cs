@@ -9,9 +9,11 @@ namespace Distribution_centar
         private List<Potrosac> potrosaci;
         private Dictionary<int,double> izvestaj;
 
+        internal List<Potrosac> Potrosaci { get => potrosaci; set => potrosaci = value; }
+
         public Izvestaj()
         {
-            this.potrosaci = new List<Potrosac>();
+            this.Potrosaci = new List<Potrosac>();
             this.izvestaj = new Dictionary<int, double>();
         }
 
@@ -19,18 +21,18 @@ namespace Distribution_centar
         public void Add(int vati, double cena)
         {
             Potrosac tmp = new Potrosac(vati, cena);
-            tmp.Id = potrosaci.Count+1;
-            potrosaci.Add(tmp);
+            tmp.Id = Potrosaci.Count+1;
+            Potrosaci.Add(tmp);
         }
         
         //Funkcija  uklanja potrosaca sa zadatim idom i updejtuje idove drugih potrosaca posle njega, vraca true ako je potrosac uspesno uklonjen
         public bool Remove(int id)
         {
-            for(int i = id+1; i < potrosaci.Count;i ++)
+            for(int i = id+1; i < Potrosaci.Count;i ++)
             {
-                potrosaci[i].Id--;
+                Potrosaci[i].Id--;
             }
-            return potrosaci.Remove(potrosaci[id]);
+            return Potrosaci.Remove(Potrosaci[id]);
             
         }
 
@@ -38,17 +40,17 @@ namespace Distribution_centar
         public bool Izracunaj_izvestaj()
         {
             double tmp;
-            for(int i = 0; i < potrosaci.Count; i++)
+            for(int i = 0; i < Potrosaci.Count; i++)
             {
-                if (izvestaj.ContainsKey(potrosaci[i].Id))
+                if (izvestaj.ContainsKey(Potrosaci[i].Id))
                 {
-                    tmp = potrosaci[i].Cena_struje * potrosaci[i].Vati;
-                    izvestaj[potrosaci[i].Id] = tmp;
+                    tmp = Potrosaci[i].Cena_struje * Potrosaci[i].Vati;
+                    izvestaj[Potrosaci[i].Id] = tmp;
                 }
-                else if(!izvestaj.ContainsKey(potrosaci[i].Id))
+                else if(!izvestaj.ContainsKey(Potrosaci[i].Id))
                 {
-                    tmp = potrosaci[i].Cena_struje * potrosaci[i].Vati;
-                    izvestaj.Add(potrosaci[i].Id, tmp);
+                    tmp = Potrosaci[i].Cena_struje * Potrosaci[i].Vati;
+                    izvestaj.Add(Potrosaci[i].Id, tmp);
                 }
                 else
                 {
@@ -58,9 +60,9 @@ namespace Distribution_centar
             }
             foreach(int id in izvestaj.Keys)
             {
-                for(int i = 0; i< potrosaci.Count; i++)
+                for(int i = 0; i< Potrosaci.Count; i++)
                 {
-                    if(id == potrosaci[i].Id)
+                    if(id == Potrosaci[i].Id)
                     {
                         break;
                     }
@@ -74,6 +76,10 @@ namespace Distribution_centar
             }
             return true;
 
+        }
+        public double Dobiti_Cenu_Struje(int id)
+        {
+            return izvestaj[id];
         }
   
         public override string ToString()

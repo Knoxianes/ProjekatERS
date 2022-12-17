@@ -21,6 +21,10 @@ namespace Distribution_centar
         private string last_received_message_consumer;
         private string last_received_message_powerplant;
         private string last_received_message_solar_wind;
+        private int flag_consumer;
+        private int flag_powerplant;
+        private int flag_solar_wind;
+        private double cena;
 
         public Distribution_center()
         {
@@ -36,7 +40,12 @@ namespace Distribution_centar
             this.Last_received_message_consumer = "";
             this.Last_received_message_powerplant = "";
             this.Last_received_message_solar_wind = "";
-            Server_Start(); // Pokretanje servera u konstruktoru
+            this.Flag_consumer = 0;
+            this.Flag_powerplant = 0;
+            this.Flag_solar_wind = 0;
+            this.Cena = 0;
+            _ = Server_Start(); // Pokretanje servera u konstruktoru
+            _ = Process_Consumer(); // Pokretanje task za obradu consumera
         }
 
         public double Potrebno_energije { get => potrebno_energije; set => potrebno_energije = value; }
@@ -48,6 +57,10 @@ namespace Distribution_centar
         public string Last_received_message_consumer { get => last_received_message_consumer; set => last_received_message_consumer = value; }
         public string Last_received_message_powerplant { get => last_received_message_powerplant; set => last_received_message_powerplant = value; }
         public string Last_received_message_solar_wind { get => last_received_message_solar_wind; set => last_received_message_solar_wind = value; }
+        public int Flag_consumer { get => flag_consumer; set => flag_consumer = value; }
+        public int Flag_powerplant { get => flag_powerplant; set => flag_powerplant = value; }
+        public int Flag_solar_wind { get => flag_solar_wind; set => flag_solar_wind = value; }
+        public double Cena { get => cena; set => cena = value; }
 
 
         // Funkcija asihrono(ne blokirajuce) svaki od servera na zadatim portovima i salje svim clientima poruku da mogu da krenu sa radom
@@ -92,7 +105,8 @@ namespace Distribution_centar
                         byte[] buffer = new byte[1024];
                         stream_consumer.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                         last_received_message_consumer = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
-                        Console.WriteLine(last_received_message_consumer);
+                        Flag_consumer = 1;                                                  // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
+                        // Console.WriteLine(last_received_message_consumer);
                     }
 
                 });
@@ -121,7 +135,8 @@ namespace Distribution_centar
                             byte[] buffer = new byte[1024];
                             stream_powerplant.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                             last_received_message_powerplant = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
-                            Console.WriteLine(last_received_message_powerplant);
+                            Flag_powerplant = 1;                                                          // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
+                            // Console.WriteLine(last_received_message_powerplant);
                         }
                         catch(Exception e)
                         {
@@ -154,7 +169,8 @@ namespace Distribution_centar
                         byte[] buffer = new byte[1024];
                         stream_solar_wind.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                         last_received_message_solar_wind = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
-                        Console.WriteLine(last_received_message_solar_wind);
+                        Flag_solar_wind = 1;                                                   // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
+                        // Console.WriteLine(last_received_message_solar_wind);
                     }
 
                 });
@@ -179,6 +195,158 @@ namespace Distribution_centar
                 Console.WriteLine("Doslo je do greske prilikom slanja poruke: " + e);
                 return false;
             }
+        }
+
+        //Funkcija radi sve potrebne izmene, dodavanja i oduzimanja za potrosca
+        private void Popunjavanje_Potrosaca(string broj)
+        {
+            var tmp = last_received_message_consumer.Split(" ");
+            if (broj == "1")
+            {
+                try
+                {
+                    for (int i = 0; i < int.Parse(tmp[1]); i++)
+                    {
+                        var vati = int.Parse(tmp[i + 2]);
+                        izvestaj.Add(vati, cena);
+                        potrebno_energije += vati;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Doslo je do greske prilikom popunjavanja potrosaca: " + e);
+                    Environment.Exit(11);
+                }
+            }else if(broj == "2")
+            {
+                try
+                {
+                    var vati = int.Parse(tmp[1]);
+                    izvestaj.Add(vati, cena);
+                    potrebno_energije += vati;
+
+                }catch(Exception e)
+                {
+                    Console.WriteLine("Doslo je do greske prilikom dodavanja jednog potrosca: " + e);
+                    Environment.Exit(12);
+                }
+            }else if(broj == "3")
+            {
+                try
+                {
+                    var id = int.Parse(tmp[1]);
+                    izvestaj.Remove(id);
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Doslo je do greske prilikom uklanjanja korisnika: " + e);
+                    Environment.Exit(13);
+                }
+
+                }
+            else if(broj == "4")
+            {
+                try
+                {
+                    var id = int.Parse(tmp[1]);
+                    var vati = int.Parse(tmp[2]);
+                    potrebno_energije = potrebno_energije - izvestaj.Potrosaci[id].Vati + vati;
+                    izvestaj.Potrosaci[id].Vati = vati;
+
+                }catch (Exception e)
+                {
+                    Console.WriteLine("Doslo je do greske pri menjanja vati kod korisnika: " + e);
+                    Environment.Exit(14);
+                }
+                
+            }
+        }
+
+
+        //Funkcija u pozadini obradjuje sve stvari vezane za potrosca, tacnije kada god potrosac nesto posalje serveru
+        // na pocetku poruke se salje kod koji oznaca radnju koju server treba da odradi,
+        // 1-prvo pokretanje,2 - dodavanje 1 potrosca, 3- brisanje potrosca, 4 - izmena nekog potrosca 5- vracanje izvestaja svih potrosca,
+        // 6- vracanje izvestaja 1 potrosaca, 7- gasenje programa
+        private async Task<Task> Process_Consumer()
+        {
+            var task = Task.Factory.StartNew(() => {
+                while (true)
+                {
+                    if(Flag_consumer != 1)
+                    {
+                        continue;
+                    }
+                    if(last_received_message_consumer.Split(" ")[0] == "1")
+                    {
+                        try
+                        {
+                            Popunjavanje_Potrosaca("1");
+                            izvestaj.Izracunaj_izvestaj();
+                            Server_Send(Stream_consumer, izvestaj.ToString());
+                            continue;
+                        }catch (Exception e)
+                        {
+                            Console.WriteLine("Doslo je do greske prilikom obrade prve poruke potrosaca: " + e);
+                            Environment.Exit(11);
+                        } 
+                    }
+                    if(last_received_message_consumer.Split(" ")[0] == "2")
+                    {
+                        Popunjavanje_Potrosaca("2");
+                        izvestaj.Izracunaj_izvestaj();
+                        continue;
+                        
+                    }
+                    if (last_received_message_consumer.Split(" ")[0] == "3")
+                    {
+                        Popunjavanje_Potrosaca("3");
+                        izvestaj.Izracunaj_izvestaj();
+                        continue;
+                    }
+                    if (last_received_message_consumer.Split(" ")[0] == "4")
+                    {
+                        Popunjavanje_Potrosaca("4");
+                        izvestaj.Izracunaj_izvestaj();
+                        continue;
+                    }
+                    if (last_received_message_consumer.Split(" ")[0] == "5")
+                    {
+
+                        Server_Send(Stream_consumer, izvestaj.ToString());
+                        continue;
+                    }
+                    if (last_received_message_consumer.Split(" ")[0] == "6")
+                    {
+                        try
+                        {
+                            var id = int.Parse(last_received_message_consumer.Split(" ")[1]);
+                            string tmp = "";
+                            tmp += "\n********************\n";
+                            tmp += "\tPotrosac broj: " + id + "\n" + "\tCena potrosnje na sat vremena: " + izvestaj.Dobiti_Cenu_Struje(id);
+                            tmp += "\n********************\n";
+                            Server_Send(Stream_consumer, tmp);
+                            continue;
+                        }catch(Exception e)
+                        {
+                            Console.WriteLine("Doslo je do greske prilikom slanja izvestaja za jednog potrosca: " + e);
+                            Environment.Exit(16);
+                        }
+
+                    }
+                    if (last_received_message_consumer.Split(" ")[0] == "7")
+                    {
+                        Console.WriteLine("\n*****PROGRAM SE GASI!!!*****");
+                        Server_Send(Stream_powerplant, "STOP", "7");
+                        Server_Send(Stream_powerplant, "STOP", "7");
+                        Environment.Exit(0);
+                        
+                    }
+
+
+                }
+            });
+            return await Task.FromResult(task);
         }
         public override string ToString()
         {

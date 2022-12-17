@@ -15,13 +15,16 @@ namespace Distribution_centar
             this.izvestaj = new Dictionary<int, double>();
         }
 
-        private void Add(int vati, double cena)
+        // Funkcija dodaje novog potrosaca u listu potrosaca
+        public void Add(int vati, double cena)
         {
             Potrosac tmp = new Potrosac(vati, cena);
             tmp.Id = potrosaci.Count+1;
             potrosaci.Add(tmp);
         }
-        private bool Remove(int id)
+        
+        //Funkcija  uklanja potrosaca sa zadatim idom i updejtuje idove drugih potrosaca posle njega, vraca true ako je potrosac uspesno uklonjen
+        public bool Remove(int id)
         {
             for(int i = id+1; i < potrosaci.Count;i ++)
             {
@@ -30,7 +33,9 @@ namespace Distribution_centar
             return potrosaci.Remove(potrosaci[id]);
             
         }
-        private bool Izracunaj_izvestaj()
+
+        // Funkcija updejtuje  listu izvestaj takodje  i updejtuje sve cene potrosnje korisnika takodje sinhornizuje listu potrosca sa listom u izvestaju po id
+        public bool Izracunaj_izvestaj()
         {
             double tmp;
             for(int i = 0; i < potrosaci.Count; i++)

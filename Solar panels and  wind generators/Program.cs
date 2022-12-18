@@ -10,7 +10,8 @@ namespace TcpClientExample
         static void Main(string[] args)
         {
             var sw = new Solar_wind();
-           
+
+            while (true) { }
         }
     }
 }

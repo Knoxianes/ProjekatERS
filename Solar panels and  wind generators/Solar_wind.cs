@@ -41,7 +41,7 @@ namespace Distribution_centar
             timer.Interval = 3000;                                      //postavimo interval
             timer.Enabled = true;                                       //pokrenemo ga
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         //ista metoda kao korisnik_ui samo se ponavlja na odredjeno vreme
@@ -63,6 +63,8 @@ namespace Distribution_centar
             Add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
             Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
         }
+
+
 
         //generisanje vise instanci panela gde korisnik zadaje broj panela koji zeli (mozemo promeniti na fiksan broj)
         public bool Add_panel(int broj_panela, int snaga_sunca)                //korisnik zadaje i procenat snage

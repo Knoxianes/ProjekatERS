@@ -8,9 +8,8 @@ namespace TcpClientExample
     class Program
     {
         static void Main(string[] args)
-        {
-            var sw = new Solar_wind();
-
+        {           
+            var sw = new Solar_wind();           
             while (true) { }
         }
     }

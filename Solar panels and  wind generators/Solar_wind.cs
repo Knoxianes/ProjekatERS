@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Text;
 using System.Timers;
+using System.Data.SqlClient;
 
 namespace Distribution_centar
 {
@@ -10,14 +13,17 @@ namespace Distribution_centar
         private List<Solar_Panel> paneli;
         private List<Wind_Generator> generatori;
         private Timer timer;
+        private int Id;                 //za bazu podataka kljuc
 
         public Solar_wind()
         {
             paneli = new List<Solar_Panel>();
             generatori = new List<Wind_Generator>();
             timer = new Timer();
+            Id = 0;                   
             Korisnik_ui();
             Ponavljanje();            //promena vrednosti snage na odredjeno vreme
+
         }
 
         public void Korisnik_ui()
@@ -37,6 +43,27 @@ namespace Distribution_centar
             Add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
             Add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
             Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
+
+            //DODAVANJE U BAZU 
+            Id++;
+            double p1 = paneli[0].Snaga_panela;
+            double p2 = paneli[1].Snaga_panela;
+            double p3 = paneli[2].Snaga_panela;
+
+            double g1 = generatori[0].Snaga_generatora;
+            double g2 = generatori[1].Snaga_generatora;
+            
+            string vreme = DateTime.Now.ToString("HH:mm:ss tt");
+
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\Database1.mdf"";Integrated Security=True";
+
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = new SqlCommand("delete from [Table]");
+            command = new SqlCommand("insert into [Table] (Id,Energija_Sunca,Energija_Vetra,Panel_1,Panel_2, Panel_3, Generator_1, Generator_2, Timestamp) values ('" + Id+"','"+sunce+"', '"+vetar+"', '"+p1+"', '"+p2+"', '"+p3+"', '"+g1+"', '"+g2+"', '"+vreme+"')", connection);
+
+            connection.Open();
+            command.ExecuteNonQuery();
+            
         }
 
         public void Ponavljanje()
@@ -65,8 +92,9 @@ namespace Distribution_centar
 
 
             for(int i=0; i<broj_panela; i++)
-            {                                             
-                Solar_Panel panel = new Solar_Panel(350*snaga_sunca/100);      //panel proizvede 340W na 100% snage 
+            {
+                Random rand = new Random();
+                Solar_Panel panel = new Solar_Panel(rand.Next(320,350)*snaga_sunca/100);      //panel proizvede 340W na 100% snage 
                 paneli.Add(panel);
             }
 
@@ -87,7 +115,8 @@ namespace Distribution_centar
 
             for (int i = 0; i < broj_generatora; i++)
             {
-                Wind_Generator generator = new Wind_Generator(8200 * snaga_vetra / 100);   //vetrenjaca proizvede 8200W na 100% snage      
+                Random rand = new Random();
+                Wind_Generator generator = new Wind_Generator(rand.Next(7900,8200) * snaga_vetra / 100);   //vetrenjaca proizvede 8200W na 100% snage      
                 generatori.Add(generator);                                              
             }
 

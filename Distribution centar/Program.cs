@@ -10,7 +10,6 @@ namespace Distribution_centar
     {
         static void Main(string[] args)
         {
-            //var sw = new Solar_wind();
             var ds = new Distribution_center();
             while (true)
             {

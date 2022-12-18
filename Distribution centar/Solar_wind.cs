@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Timers;
 
 namespace Distribution_centar
 {
@@ -11,37 +12,63 @@ namespace Distribution_centar
 
         public Solar_wind()
         {
-               paneli = new Dictionary<int, Solar_Panel>();
-               generatori = new Dictionary<int, Wind_Generator>();
-               korisnik();
+            paneli = new Dictionary<int, Solar_Panel>();
+            generatori = new Dictionary<int, Wind_Generator>();
+            korisnik_ui();
         }
 
-        public void korisnik()
-        { 
-            Console.Write("Unesite vrednost snage sunca/vetra: ");
-            int vrednost = int.Parse(Console.ReadLine());
-            if (vrednost >= 0 && vrednost <= 100)
-            {
-                Console.WriteLine("Unesena je validna vrednost.");
-            }
-            else
+        public void korisnik_ui()
+        {
+            Console.Write("Unesite vrednost snage sunca: ");
+            int sunce = int.Parse(Console.ReadLine());
+            if (sunce < 0 && sunce > 100)
             {
                 Console.WriteLine("Unesena vrednost nije u validnom opsegu.");
             }
 
-            //ili slucajno generisanje vrednosti snage sunca/vetra 
+            //slucajno generisanje vrednosti snage vetra 
             Random random = new Random();
-            int value = random.Next(0, 101);
-            Console.WriteLine($"Vrednost snage sunca/vetra je: {value}"); 
+            int vetar = random.Next(0, 101);
+            Console.WriteLine("Vrednost snage vetra je: " + vetar);
 
-            add_panel(3, 70);   //prvi argument je broj panela a drugi snaga
-            add_generator(2, 20);   //prvi argument je broj generatora a drugi snaga
-            Console.WriteLine(ukupna_snaga());
+            add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
+            add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
+            Console.WriteLine("Ukupna snaga je: " + ukupna_snaga());
+
+            //menjamo vrednosti na odredjeno vreme
+            Timer timer = new Timer();                                  //napravi se tajmer
+            timer.Elapsed += new ElapsedEventHandler(na_vreme);         //kazemo sta radi po isteku intervala
+            timer.Interval = 3000;                                      //postavimo interval
+            timer.Enabled = true;                                       //pokrenemo ga
+
+        }
+
+        //ista metoda kao korisnik_ui samo se ponavlja na odredjeno vreme
+        public void na_vreme(object source, ElapsedEventArgs evArgs)
+        {
+            Console.Write("Unesite vrednost snage sunca: ");
+            int sunce = int.Parse(Console.ReadLine());
+            if (sunce < 0 && sunce > 100)
+            {
+                Console.WriteLine("Unesena vrednost nije u validnom opsegu.");
+            }
+
+            //slucajno generisanje vrednosti snage vetra 
+            Random random = new Random();
+            int vetar = random.Next(0, 101);
+            Console.WriteLine("Vrednost snage vetra je: " + vetar);
+
+            add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
+            add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
+            Console.WriteLine("Ukupna snaga je: " + ukupna_snaga());
         }
 
         //generisanje vise instanci panela gde korisnik zadaje broj panela koji zeli (mozemo promeniti na fiksan broj)
         public bool add_panel(int broj_panela, int snaga_sunca)                //korisnik zadaje i procenat snage
         {
+            if (paneli.Count != 0)
+                paneli.Clear();
+
             for(int i=0; i<broj_panela; i++)
             {                                             
                 Solar_Panel panel = new Solar_Panel(350*snaga_sunca/100);      //panel proizvede 340W na 100% snage 
@@ -60,6 +87,9 @@ namespace Distribution_centar
         //generisanje vise instanci generatora gde korisnik zadaje broj generatora koji zeli (mozemo promeniti na fiksan broj)
         public bool add_generator(int broj_generatora, int snaga_vetra)
         {
+            if (generatori.Count != 0)
+                generatori.Clear();
+
             for (int i = 0; i < broj_generatora; i++)
             {
                 Wind_Generator generator = new Wind_Generator(8200 * snaga_vetra / 100);   //vetrenjaca proizvede 8200W na 100% snage      

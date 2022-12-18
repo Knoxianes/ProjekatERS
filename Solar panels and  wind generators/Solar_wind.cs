@@ -7,17 +7,17 @@ namespace Distribution_centar
 {
     class Solar_wind
     {
-        Dictionary<int, Solar_Panel> paneli;
-        Dictionary<int, Wind_Generator> generatori;
+        List<Solar_Panel> paneli;
+        List<Wind_Generator> generatori;
 
         public Solar_wind()
         {
-            paneli = new Dictionary<int, Solar_Panel>();
-            generatori = new Dictionary<int, Wind_Generator>();
-            korisnik_ui();
+            paneli = new List<Solar_Panel>();
+            generatori = new List<Wind_Generator>();
+            Korisnik_ui();
         }
 
-        public void korisnik_ui()
+        public void Korisnik_ui()
         {
             Console.Write("Unesite vrednost snage sunca: ");
             int sunce = int.Parse(Console.ReadLine());
@@ -31,20 +31,21 @@ namespace Distribution_centar
             int vetar = random.Next(0, 101);
             Console.WriteLine("Vrednost snage vetra je: " + vetar);
 
-            add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
-            add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
-            Console.WriteLine("Ukupna snaga je: " + ukupna_snaga());
+            Add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
+            Add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
+            Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
 
             //menjamo vrednosti na odredjeno vreme
             Timer timer = new Timer();                                  //napravi se tajmer
-            timer.Elapsed += new ElapsedEventHandler(na_vreme);         //kazemo sta radi po isteku intervala
+            timer.Elapsed += new ElapsedEventHandler(Na_vreme);         //kazemo sta radi po isteku intervala
             timer.Interval = 3000;                                      //postavimo interval
             timer.Enabled = true;                                       //pokrenemo ga
 
+            Console.ReadKey();
         }
 
         //ista metoda kao korisnik_ui samo se ponavlja na odredjeno vreme
-        public void na_vreme(object source, ElapsedEventArgs evArgs)
+        public void Na_vreme(object source, ElapsedEventArgs evArgs)
         {
             Console.Write("Unesite vrednost snage sunca: ");
             int sunce = int.Parse(Console.ReadLine());
@@ -58,21 +59,22 @@ namespace Distribution_centar
             int vetar = random.Next(0, 101);
             Console.WriteLine("Vrednost snage vetra je: " + vetar);
 
-            add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
-            add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
-            Console.WriteLine("Ukupna snaga je: " + ukupna_snaga());
+            Add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
+            Add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
+            Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
         }
 
         //generisanje vise instanci panela gde korisnik zadaje broj panela koji zeli (mozemo promeniti na fiksan broj)
-        public bool add_panel(int broj_panela, int snaga_sunca)                //korisnik zadaje i procenat snage
+        public bool Add_panel(int broj_panela, int snaga_sunca)                //korisnik zadaje i procenat snage
         {
             if (paneli.Count != 0)
                 paneli.Clear();
 
+
             for(int i=0; i<broj_panela; i++)
             {                                             
                 Solar_Panel panel = new Solar_Panel(350*snaga_sunca/100);      //panel proizvede 340W na 100% snage 
-                paneli.Add(i, panel);
+                paneli.Add(panel);
             }
 
             if (paneli.Count == 0)
@@ -85,7 +87,7 @@ namespace Distribution_centar
         }
 
         //generisanje vise instanci generatora gde korisnik zadaje broj generatora koji zeli (mozemo promeniti na fiksan broj)
-        public bool add_generator(int broj_generatora, int snaga_vetra)
+        public bool Add_generator(int broj_generatora, int snaga_vetra)
         {
             if (generatori.Count != 0)
                 generatori.Clear();
@@ -93,7 +95,7 @@ namespace Distribution_centar
             for (int i = 0; i < broj_generatora; i++)
             {
                 Wind_Generator generator = new Wind_Generator(8200 * snaga_vetra / 100);   //vetrenjaca proizvede 8200W na 100% snage      
-                generatori.Add(i, generator);                                              
+                generatori.Add(generator);                                              
             }
 
             if (generatori.Count == 0)
@@ -106,16 +108,16 @@ namespace Distribution_centar
         }
 
         //racunanje ukupne snage koju proizvode
-        public double ukupna_snaga()
+        public double Ukupna_snaga()
         {
             double ukupno_paneli = 0;
             double ukupno_generatori = 0;
 
             foreach (var temp in paneli)
-                ukupno_paneli += temp.Value.Snaga_panela;
+                ukupno_paneli += temp.Snaga_panela;
 
             foreach (var temp in generatori)
-                ukupno_generatori += temp.Value.Snaga_generatora;
+                ukupno_generatori += temp.Snaga_generatora;
 
             return ukupno_paneli + ukupno_generatori;
         }

@@ -28,8 +28,7 @@ namespace Distribution_centar
         public bool add_panel(int broj_panela, int snaga_sunca)                //korisnik zadaje i procenat snage
         {
             for(int i=0; i<broj_panela; i++)
-            {
-                Random rnd = new Random();                              
+            {                                             
                 Solar_Panel panel = new Solar_Panel(350*snaga_sunca/100);      //panel proizvede 340W na 100% snage 
                 paneli.Add(i, panel);
             }
@@ -48,7 +47,6 @@ namespace Distribution_centar
         {
             for (int i = 0; i < broj_generatora; i++)
             {
-                Random rnd = new Random();
                 Wind_Generator generator = new Wind_Generator(8200 * snaga_vetra / 100);   //vetrenjaca proizvede 8200W na 100% snage      
                 generatori.Add(i, generator);                                              
             }

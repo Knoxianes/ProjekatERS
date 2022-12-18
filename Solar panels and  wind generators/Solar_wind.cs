@@ -7,14 +7,17 @@ namespace Distribution_centar
 {
     class Solar_wind
     {
-        List<Solar_Panel> paneli;
-        List<Wind_Generator> generatori;
+        private List<Solar_Panel> paneli;
+        private List<Wind_Generator> generatori;
+        private Timer timer;
 
         public Solar_wind()
         {
             paneli = new List<Solar_Panel>();
             generatori = new List<Wind_Generator>();
+            timer = new Timer();
             Korisnik_ui();
+            ponavljanje();            //promena vrednosti na odredjeno vreme
         }
 
         public void Korisnik_ui()
@@ -34,34 +37,22 @@ namespace Distribution_centar
             Add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
             Add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
             Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
+        }
 
-            //menjamo vrednosti na odredjeno vreme
-            Timer timer = new Timer();                                  //napravi se tajmer
-            timer.Elapsed += new ElapsedEventHandler(Na_vreme);         //kazemo sta radi po isteku intervala
+        public void ponavljanje()
+        {
+            //menjamo vrednosti na odredjeno vreme                                
+            timer.Elapsed += new ElapsedEventHandler(Na_vreme);         //kazemo sta radi timer po isteku intervala
             timer.Interval = 3000;                                      //postavimo interval
             timer.Enabled = true;                                       //pokrenemo ga
-
-            //Console.ReadKey();
         }
 
         //ista metoda kao korisnik_ui samo se ponavlja na odredjeno vreme
         public void Na_vreme(object source, ElapsedEventArgs evArgs)
         {
-            Console.Write("Unesite vrednost snage sunca: ");
-            int sunce = int.Parse(Console.ReadLine());
-            if (sunce < 0 && sunce > 100)
-            {
-                Console.WriteLine("Unesena vrednost nije u validnom opsegu.");
-            }
-
-            //slucajno generisanje vrednosti snage vetra 
-            Random random = new Random();
-            int vetar = random.Next(0, 101);
-            Console.WriteLine("Vrednost snage vetra je: " + vetar);
-
-            Add_panel(3, sunce);                                            //prvi argument je broj panela a drugi snaga
-            Add_generator(2, vetar);                                        //prvi argument je broj generatora a drugi snaga
-            Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
+            timer.Stop();               //ako korisniku treba malo vise vremena da ukuca nego sto traje interval
+            Korisnik_ui();
+            timer.Start();
         }
 
 

@@ -5,6 +5,7 @@ using System.Data.Entity.Core.Common.CommandTrees;
 using System.Text;
 using System.Timers;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Distribution_centar
 {
@@ -55,12 +56,15 @@ namespace Distribution_centar
             
             string vreme = DateTime.Now.ToString("HH:mm:ss tt");
 
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\Database1.mdf"";Integrated Security=True";
+            string relativePath = @"..\..\Database1.mdf";
+            string absolutePath = Path.GetFullPath(relativePath);
+
+            string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
 
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand("delete from [Table]");
             command = new SqlCommand("insert into [Table] (Id,Energija_Sunca,Energija_Vetra,Panel_1,Panel_2, Panel_3, Generator_1, Generator_2, Timestamp) values ('" + Id+"','"+sunce+"', '"+vetar+"', '"+p1+"', '"+p2+"', '"+p3+"', '"+g1+"', '"+g2+"', '"+vreme+"')", connection);
-
+            
             connection.Open();
             command.ExecuteNonQuery();
             

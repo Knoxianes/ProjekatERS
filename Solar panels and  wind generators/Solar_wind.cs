@@ -17,7 +17,7 @@ namespace Distribution_centar
             generatori = new List<Wind_Generator>();
             timer = new Timer();
             Korisnik_ui();
-            ponavljanje();            //promena vrednosti na odredjeno vreme
+            Ponavljanje();            //promena vrednosti snage na odredjeno vreme
         }
 
         public void Korisnik_ui()
@@ -39,7 +39,7 @@ namespace Distribution_centar
             Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
         }
 
-        public void ponavljanje()
+        public void Ponavljanje()
         {
             //menjamo vrednosti na odredjeno vreme                                
             timer.Elapsed += new ElapsedEventHandler(Na_vreme);         //kazemo sta radi timer po isteku intervala

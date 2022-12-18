@@ -284,6 +284,7 @@ namespace Distribution_centar
                             Popunjavanje_Potrosaca("1");
                             izvestaj.Izracunaj_izvestaj();
                             Server_Send(Stream_consumer, izvestaj.ToString());
+                            Flag_consumer = 0;
                             continue;
                         }catch (Exception e)
                         {
@@ -295,6 +296,8 @@ namespace Distribution_centar
                     {
                         Popunjavanje_Potrosaca("2");
                         izvestaj.Izracunaj_izvestaj();
+                        Server_Send(Stream_consumer, "Done");
+                        Flag_consumer = 0;
                         continue;
                         
                     }
@@ -302,18 +305,23 @@ namespace Distribution_centar
                     {
                         Popunjavanje_Potrosaca("3");
                         izvestaj.Izracunaj_izvestaj();
+                        Server_Send(Stream_consumer, "Done");
+                        Flag_consumer = 0;
                         continue;
                     }
                     if (last_received_message_consumer.Split(" ")[0] == "4")
                     {
                         Popunjavanje_Potrosaca("4");
                         izvestaj.Izracunaj_izvestaj();
+                        Server_Send(Stream_consumer, "Done");
+                        Flag_consumer = 0;
                         continue;
                     }
                     if (last_received_message_consumer.Split(" ")[0] == "5")
                     {
 
                         Server_Send(Stream_consumer, izvestaj.ToString());
+                        Flag_consumer = 0;
                         continue;
                     }
                     if (last_received_message_consumer.Split(" ")[0] == "6")
@@ -326,6 +334,7 @@ namespace Distribution_centar
                             tmp += "\tPotrosac broj: " + id + "\n" + "\tCena potrosnje na sat vremena: " + izvestaj.Dobiti_Cenu_Struje(id);
                             tmp += "\n********************\n";
                             Server_Send(Stream_consumer, tmp);
+                            Flag_consumer = 0;
                             continue;
                         }catch(Exception e)
                         {

@@ -26,14 +26,16 @@ namespace Distribution_centar
         }
         
         //Funkcija  uklanja potrosaca sa zadatim idom i updejtuje idove drugih potrosaca posle njega, vraca true ako je potrosac uspesno uklonjen
-        public bool Remove(int id)
+        public void Remove(int id)
         {
-            for(int i = id+1; i < Potrosaci.Count;i ++)
+           for(int i = id; i < potrosaci.Count; i++)
             {
-                Potrosaci[i].Id--;
+                potrosaci[i].Id--;
+                
             }
-            return Potrosaci.Remove(Potrosaci[id]);
-            
+            potrosaci.RemoveAt(id - 1);
+            izvestaj.Clear();
+            Izracunaj_izvestaj();
         }
 
         // Funkcija updejtuje  listu izvestaj takodje  i updejtuje sve cene potrosnje korisnika takodje sinhornizuje listu potrosca sa listom u izvestaju po id
@@ -44,12 +46,12 @@ namespace Distribution_centar
             {
                 if (izvestaj.ContainsKey(Potrosaci[i].Id))
                 {
-                    tmp = Potrosaci[i].Cena_struje * Potrosaci[i].Vati;
+                    tmp = Potrosaci[i].Cena_struje * Potrosaci[i].Vati/1000;
                     izvestaj[Potrosaci[i].Id] = tmp;
                 }
                 else if(!izvestaj.ContainsKey(Potrosaci[i].Id))
                 {
-                    tmp = Potrosaci[i].Cena_struje * Potrosaci[i].Vati;
+                    tmp = Potrosaci[i].Cena_struje * Potrosaci[i].Vati/1000;
                     izvestaj.Add(Potrosaci[i].Id, tmp);
                 }
                 else
@@ -57,22 +59,6 @@ namespace Distribution_centar
                     Console.WriteLine("Doslo je do greske pri racunanju izvestaja kod racunanja cene!");
                     return false;
                 }
-            }
-            foreach(int id in izvestaj.Keys)
-            {
-                for(int i = 0; i< Potrosaci.Count; i++)
-                {
-                    if(id == Potrosaci[i].Id)
-                    {
-                        break;
-                    }
-                    if (!izvestaj.Remove(id))
-                    {
-                        Console.WriteLine("Doslo je do greske pri racunanju izvestaja kod brisanja iz Dictionary");
-                        return false;
-                    }
-                }
-
             }
             return true;
 
@@ -84,14 +70,15 @@ namespace Distribution_centar
   
         public override string ToString()
         {
-            string tmp = "";
+            
+            string tmp = "\n*************************************************";
             foreach (int id in izvestaj.Keys)
             {
-                tmp += "\n********************\n";
-                tmp += "\tPotrosac broj: " + id + "\n" + "\tCena potrosnje na sat vremena: " + izvestaj[id];
-                tmp += "\n********************\n";
+
+                tmp += "\nPotrosac broj: " + id + " Cena potrosnje na sat vremena: " + izvestaj[id];
 
             }
+            tmp += "\n*************************************************\n";
 
             return tmp;
         }

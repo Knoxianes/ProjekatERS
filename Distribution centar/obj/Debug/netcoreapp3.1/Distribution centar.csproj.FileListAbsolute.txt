@@ -11,3 +11,4 @@ C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcor
 C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.pdb
 C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.genruntimeconfig.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.csproj.AssemblyReference.cache

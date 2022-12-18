@@ -17,8 +17,23 @@ namespace Distribution_centar
         }
 
         public void korisnik()
-        {
-            //NATASA OVDE RADIS *************************************************
+        { 
+            Console.Write("Unesite vrednost snage sunca/vetra: ");
+            int vrednost = int.Parse(Console.ReadLine());
+            if (vrednost >= 0 && vrednost <= 100)
+            {
+                Console.WriteLine("Unesena je validna vrednost.");
+            }
+            else
+            {
+                Console.WriteLine("Unesena vrednost nije u validnom opsegu.");
+            }
+
+            //ili slucajno generisanje vrednosti snage sunca/vetra 
+            Random random = new Random();
+            int value = random.Next(0, 101);
+            Console.WriteLine($"Vrednost snage sunca/vetra je: {value}"); 
+
             add_panel(3, 70);   //prvi argument je broj panela a drugi snaga
             add_generator(2, 20);   //prvi argument je broj generatora a drugi snaga
             Console.WriteLine(ukupna_snaga());

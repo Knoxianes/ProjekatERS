@@ -12,3 +12,17 @@ C:\Users\strah\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\
 C:\Users\strah\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.pdb
 C:\Users\strah\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.genruntimeconfig.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\bin\Debug\netcoreapp3.1\Hydroelectric power plant.exe
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\bin\Debug\netcoreapp3.1\Hydroelectric power plant.deps.json
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\bin\Debug\netcoreapp3.1\Hydroelectric power plant.runtimeconfig.json
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\bin\Debug\netcoreapp3.1\Hydroelectric power plant.runtimeconfig.dev.json
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\bin\Debug\netcoreapp3.1\Hydroelectric power plant.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\bin\Debug\netcoreapp3.1\Hydroelectric power plant.pdb
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.pdb
+C:\Users\admin\Documents\GitHub\ProjekatERS\Hydroelectric power plant\obj\Debug\netcoreapp3.1\Hydroelectric power plant.genruntimeconfig.cache

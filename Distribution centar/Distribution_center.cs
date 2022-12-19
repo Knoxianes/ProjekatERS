@@ -43,7 +43,7 @@ namespace Distribution_centar
             this.Flag_consumer = 0;
             this.Flag_powerplant = 0;
             this.Flag_solar_wind = 0;
-            this.Cena = 0;
+            this.Cena = 50;
             _ = Server_Start(); // Pokretanje servera u konstruktoru
             _ = Process_Consumer(); // Pokretanje task za obradu consumera
         }
@@ -71,10 +71,11 @@ namespace Distribution_centar
                 var task_consumer = await Server_Recieve_Consumer( 8000);
                 var task_powerplant = await Server_Recieve_Powerplant(8001);
                 var task_solar_wind = await Server_Recieve_Solar_wind(8002);
-                Task.WaitAll(task_consumer, task_powerplant, task_solar_wind);
-                Server_Send(Stream_consumer, "Start");
-                Server_Send(Stream_powerplant, "Start");
-                Server_Send(Stream_solar_wind, "Start");
+                //Task.WaitAll(task_consumer, task_powerplant, task_solar_wind);
+                Task.WaitAll(task_consumer);
+                Server_Send(Stream_consumer, "1");
+               // Server_Send(Stream_powerplant, "1");
+                //Server_Send(Stream_solar_wind, "1");
 
             }
             catch
@@ -106,7 +107,7 @@ namespace Distribution_centar
                         stream_consumer.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                         last_received_message_consumer = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
                         Flag_consumer = 1;                                                  // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
-                        // Console.WriteLine(last_received_message_consumer);
+                        //Console.WriteLine(last_received_message_consumer);
                     }
 
                 });
@@ -184,7 +185,7 @@ namespace Distribution_centar
             {
                 if (code != "")
                 {
-                    code += " ";
+                    code += ";";
                 }
                 byte[] data = Encoding.ASCII.GetBytes(code + message);
                 ns.Write(data, 0, data.Length);
@@ -198,10 +199,10 @@ namespace Distribution_centar
         }
 
         //Funkcija radi sve potrebne izmene, dodavanja i oduzimanja za potrosca
-        private void Popunjavanje_Potrosaca(string broj)
+        private void Popunjavanje_Potrosaca(int broj)
         {
-            var tmp = last_received_message_consumer.Split(" ");
-            if (broj == "1")
+            var tmp = last_received_message_consumer.Split(";");
+            if (broj == 1)
             {
                 try
                 {
@@ -210,6 +211,7 @@ namespace Distribution_centar
                         var vati = int.Parse(tmp[i + 2]);
                         izvestaj.Add(vati, cena);
                         potrebno_energije += vati;
+                        
                     }
                 }
                 catch (Exception e)
@@ -217,7 +219,7 @@ namespace Distribution_centar
                     Console.WriteLine("Doslo je do greske prilikom popunjavanja potrosaca: " + e);
                     Environment.Exit(11);
                 }
-            }else if(broj == "2")
+            }else if(broj == 2)
             {
                 try
                 {
@@ -230,7 +232,7 @@ namespace Distribution_centar
                     Console.WriteLine("Doslo je do greske prilikom dodavanja jednog potrosca: " + e);
                     Environment.Exit(12);
                 }
-            }else if(broj == "3")
+            }else if(broj == 3)
             {
                 try
                 {
@@ -245,14 +247,14 @@ namespace Distribution_centar
                 }
 
                 }
-            else if(broj == "4")
+            else if(broj == 4)
             {
                 try
                 {
                     var id = int.Parse(tmp[1]);
                     var vati = int.Parse(tmp[2]);
-                    potrebno_energije = potrebno_energije - izvestaj.Potrosaci[id].Vati + vati;
-                    izvestaj.Potrosaci[id].Vati = vati;
+                    potrebno_energije = potrebno_energije - izvestaj.Potrosaci[id-1].Vati + vati;
+                    izvestaj.Potrosaci[id-1].Vati = vati;
 
                 }catch (Exception e)
                 {
@@ -277,13 +279,13 @@ namespace Distribution_centar
                     {
                         continue;
                     }
-                    if(last_received_message_consumer.Split(" ")[0] == "1")
+                    if(int.Parse(last_received_message_consumer.Split(";")[0]) == 1)
                     {
                         try
                         {
-                            Popunjavanje_Potrosaca("1");
+                            Popunjavanje_Potrosaca(1);
                             izvestaj.Izracunaj_izvestaj();
-                            Server_Send(Stream_consumer, izvestaj.ToString());
+                            Server_Send(Stream_consumer, "Done");
                             Flag_consumer = 0;
                             continue;
                         }catch (Exception e)
@@ -292,47 +294,46 @@ namespace Distribution_centar
                             Environment.Exit(11);
                         } 
                     }
-                    if(last_received_message_consumer.Split(" ")[0] == "2")
+                    if (int.Parse(last_received_message_consumer.Split(";")[0]) == 2)
                     {
-                        Popunjavanje_Potrosaca("2");
+                        Popunjavanje_Potrosaca(2);
                         izvestaj.Izracunaj_izvestaj();
                         Server_Send(Stream_consumer, "Done");
                         Flag_consumer = 0;
                         continue;
                         
                     }
-                    if (last_received_message_consumer.Split(" ")[0] == "3")
+                    if (int.Parse(last_received_message_consumer.Split(";")[0]) == 3)
                     {
-                        Popunjavanje_Potrosaca("3");
+                        Popunjavanje_Potrosaca(3);
                         izvestaj.Izracunaj_izvestaj();
                         Server_Send(Stream_consumer, "Done");
                         Flag_consumer = 0;
                         continue;
                     }
-                    if (last_received_message_consumer.Split(" ")[0] == "4")
+                    if (int.Parse(last_received_message_consumer.Split(";")[0]) == 4)
                     {
-                        Popunjavanje_Potrosaca("4");
+                        Popunjavanje_Potrosaca(4);
                         izvestaj.Izracunaj_izvestaj();
                         Server_Send(Stream_consumer, "Done");
                         Flag_consumer = 0;
                         continue;
                     }
-                    if (last_received_message_consumer.Split(" ")[0] == "5")
+                    if (int.Parse(last_received_message_consumer.Split(";")[0]) == 5)
                     {
 
                         Server_Send(Stream_consumer, izvestaj.ToString());
                         Flag_consumer = 0;
                         continue;
                     }
-                    if (last_received_message_consumer.Split(" ")[0] == "6")
+                    if (int.Parse(last_received_message_consumer.Split(";")[0]) == 6)
                     {
                         try
                         {
-                            var id = int.Parse(last_received_message_consumer.Split(" ")[1]);
-                            string tmp = "";
-                            tmp += "\n********************\n";
-                            tmp += "\tPotrosac broj: " + id + "\n" + "\tCena potrosnje na sat vremena: " + izvestaj.Dobiti_Cenu_Struje(id);
-                            tmp += "\n********************\n";
+                            var id = int.Parse(last_received_message_consumer.Split(";")[1]);
+                            string tmp = "\n*************************************************";
+                            tmp += "\nPotrosac broj: " + id + " Cena potrosnje na sat vremena: " + izvestaj.Dobiti_Cenu_Struje(id);
+                            tmp += "\n*************************************************\n";
                             Server_Send(Stream_consumer, tmp);
                             Flag_consumer = 0;
                             continue;
@@ -343,14 +344,15 @@ namespace Distribution_centar
                         }
 
                     }
-                    if (last_received_message_consumer.Split(" ")[0] == "7")
+                    if (int.Parse(last_received_message_consumer.Split(";")[0]) == 7)
                     {
                         Console.WriteLine("\n*****PROGRAM SE GASI!!!*****");
                         Server_Send(Stream_powerplant, "STOP", "7");
-                        Server_Send(Stream_powerplant, "STOP", "7");
+                        Server_Send(Stream_solar_wind, "STOP", "7");
                         Environment.Exit(0);
-                        
+
                     }
+
 
 
                 }

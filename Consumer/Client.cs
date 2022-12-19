@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Sockets;
 using System.Text;
 
@@ -56,6 +57,22 @@ namespace Consumer
             {
                 Console.WriteLine("Doslo je do greske prilikom primanja poruke: " + e);
                 return "";
+            }
+        }
+        //Funkcija pise u fajl sa odredjenim pathom
+        public bool WriteToFile(string msg,string path)
+        {
+            try
+            {
+                using  StreamWriter w = new StreamWriter(path,append:true);
+                w.WriteLine(msg);
+                w.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Doslo je do greske prilikom pisanja u fajl! " + e);
+                return false;
             }
         }
         

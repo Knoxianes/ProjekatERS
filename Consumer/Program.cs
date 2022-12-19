@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Consumer
 {
@@ -51,7 +52,7 @@ namespace Consumer
             }
             
             client.Send(msg, "1");
-           
+            File.WriteAllText("Log\\log_consumer.txt", "Ka serveru je poslata poruka:" + msg + "\n");
         }
         
 
@@ -66,6 +67,7 @@ namespace Consumer
         {
             Console.Clear();
             string msg = client.Recieve();
+            client.WriteToFile("Consumer je primio poruku: " + msg, "Log\\log_consumer.txt");
             Console.WriteLine("*************** MENU ***************");
             Console.WriteLine("\t1.Dodati novog potrosaca");
             Console.WriteLine("\t2.Ukloniti potrosaca");
@@ -79,6 +81,7 @@ namespace Consumer
             switch (Console.ReadKey().KeyChar){ // Svaki od kodova koji se salju su povezani sa kodovima na serverskoj strani
                 case '1':
                     client.Send(Dodavanje_Potrosaca(),"2");
+                    client.WriteToFile("Dodat je novi potrosac.", "Log\\log_consumer.txt");
                     break;
                 case '2':
                     client.Send(Ukloniti_Potrosaca(), "3");

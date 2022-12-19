@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -73,6 +74,7 @@ namespace Distribution_centar
                 var task_solar_wind = await Server_Recieve_Solar_wind(8002);
                 //Task.WaitAll(task_consumer, task_powerplant, task_solar_wind);
                 Task.WaitAll(task_consumer);
+                File.WriteAllText("Log\\log_distribution_center.txt", "Distribution center krece sa radom!\n");
                 Server_Send(Stream_consumer, "1");
                // Server_Send(Stream_powerplant, "1");
                 //Server_Send(Stream_solar_wind, "1");
@@ -106,6 +108,7 @@ namespace Distribution_centar
                         byte[] buffer = new byte[1024];
                         stream_consumer.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                         last_received_message_consumer = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
+                        WriteToFile("Server je primio poruku od consumera: " + last_received_message_consumer, "Log\\log_distribution_center.txt");
                         Flag_consumer = 1;                                                  // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
                         //Console.WriteLine(last_received_message_consumer);
                     }
@@ -136,6 +139,7 @@ namespace Distribution_centar
                             byte[] buffer = new byte[1024];
                             stream_powerplant.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                             last_received_message_powerplant = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
+                            WriteToFile("Server je primio poruku od powerplanta: " + last_received_message_powerplant, "Log\\log_distribution_center.txt");
                             Flag_powerplant = 1;                                                          // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
                             // Console.WriteLine(last_received_message_powerplant);
                         }
@@ -170,6 +174,7 @@ namespace Distribution_centar
                         byte[] buffer = new byte[1024];
                         stream_solar_wind.Read(buffer);                                            //Citanje poruke ako je primljena i jedna
                         last_received_message_solar_wind = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
+                        WriteToFile("Server je primio poruku od windmill and solar panela: " + last_received_message_solar_wind, "Log\\log_distribution_center.txt");
                         Flag_solar_wind = 1;                                                   // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
                         // Console.WriteLine(last_received_message_solar_wind);
                     }
@@ -189,6 +194,7 @@ namespace Distribution_centar
                 }
                 byte[] data = Encoding.ASCII.GetBytes(code + message);
                 ns.Write(data, 0, data.Length);
+                WriteToFile("Server je poslao poruku: " + code + message, "Log\\log_distribution_center.txt");
                 return true;
             }
             catch (Exception e)
@@ -204,6 +210,7 @@ namespace Distribution_centar
             var tmp = last_received_message_consumer.Split(";");
             if (broj == 1)
             {
+                WriteToFile("Server popunjava potrosace u izvestaj!", "Log\\log_distribution_center.txt");
                 try
                 {
                     for (int i = 0; i < int.Parse(tmp[1]); i++)
@@ -221,6 +228,7 @@ namespace Distribution_centar
                 }
             }else if(broj == 2)
             {
+                WriteToFile("Server dodaje novog korisnika.", "Log\\log_distribution_center.txt");
                 try
                 {
                     var vati = int.Parse(tmp[1]);
@@ -234,6 +242,7 @@ namespace Distribution_centar
                 }
             }else if(broj == 3)
             {
+                WriteToFile("Server uklanja korisnika.", "Log\\log_distribution_center.txt");
                 try
                 {
                     var id = int.Parse(tmp[1]);
@@ -249,6 +258,7 @@ namespace Distribution_centar
                 }
             else if(broj == 4)
             {
+                WriteToFile("Server menja korisnika:", "Log\\log_distribution_center.txt");
                 try
                 {
                     var id = int.Parse(tmp[1]);
@@ -321,13 +331,14 @@ namespace Distribution_centar
                     }
                     if (int.Parse(last_received_message_consumer.Split(";")[0]) == 5)
                     {
-
+                        WriteToFile("Server salje izvestaj potrosacima! ","Log\\log_distribution_center.txt");
                         Server_Send(Stream_consumer, izvestaj.ToString());
                         Flag_consumer = 0;
                         continue;
                     }
                     if (int.Parse(last_received_message_consumer.Split(";")[0]) == 6)
                     {
+                        WriteToFile("Server salje izvestaj za jednog potrosaca!", "Log\\log_distribution_center.txt");
                         try
                         {
                             var id = int.Parse(last_received_message_consumer.Split(";")[1]);
@@ -347,8 +358,9 @@ namespace Distribution_centar
                     if (int.Parse(last_received_message_consumer.Split(";")[0]) == 7)
                     {
                         Console.WriteLine("\n*****PROGRAM SE GASI!!!*****");
-                        Server_Send(Stream_powerplant, "STOP", "7");
-                        Server_Send(Stream_solar_wind, "STOP", "7");
+                        // Server_Send(Stream_powerplant, "STOP", "7");
+                        //Server_Send(Stream_solar_wind, "STOP", "7");
+                        WriteToFile("SERVER SE GASI!", "Log\\log_distribution_center.txt");
                         Environment.Exit(0);
 
                     }
@@ -358,6 +370,21 @@ namespace Distribution_centar
                 }
             });
             return await Task.FromResult(task);
+        }
+        public bool WriteToFile(string msg, string path)
+        {
+            try
+            {
+                using StreamWriter w = new StreamWriter(path, append: true);
+                w.WriteLine(msg);
+                w.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Doslo je do greske prilikom pisanja u fajl! " + e);
+                return false;
+            }
         }
         public override string ToString()
         {

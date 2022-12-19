@@ -13,15 +13,13 @@ namespace Distribution_centar
     {
         private List<Solar_Panel> paneli;
         private List<Wind_Generator> generatori;
-        private Timer timer;
-        private int Id;                 //za bazu podataka kljuc
+        private Timer timer;       
 
         public Solar_wind()
         {
             paneli = new List<Solar_Panel>();
             generatori = new List<Wind_Generator>();
-            timer = new Timer();
-            Id = 0;                   
+            timer = new Timer();                  
             Korisnik_ui();
             Ponavljanje();            //promena vrednosti snage na odredjeno vreme
 
@@ -46,7 +44,6 @@ namespace Distribution_centar
             Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga());
 
             //DODAVANJE U BAZU 
-            Id++;
             double p1 = paneli[0].Snaga_panela;
             double p2 = paneli[1].Snaga_panela;
             double p3 = paneli[2].Snaga_panela;
@@ -62,8 +59,7 @@ namespace Distribution_centar
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
 
             SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand("delete from [Table]");
-            command = new SqlCommand("insert into [Table] (Id,Energija_Sunca,Energija_Vetra,Panel_1,Panel_2, Panel_3, Generator_1, Generator_2, Timestamp) values ('" + Id+"','"+sunce+"', '"+vetar+"', '"+p1+"', '"+p2+"', '"+p3+"', '"+g1+"', '"+g2+"', '"+vreme+"')", connection);
+            SqlCommand  command = new SqlCommand("insert into [Table] (Energija_Sunca,Energija_Vetra,Panel_1,Panel_2, Panel_3, Generator_1, Generator_2, Timestamp) values ('"+sunce+"', '"+vetar+"', '"+p1+"', '"+p2+"', '"+p3+"', '"+g1+"', '"+g2+"', '"+vreme+"')", connection);
             
             connection.Open();
             command.ExecuteNonQuery();

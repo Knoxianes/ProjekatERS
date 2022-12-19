@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Distribution_centar
 {
-    class Distribution_center
+    public class Distribution_center
     {
         private Izvestaj izvestaj;
         private Solar_wind solar_wind;

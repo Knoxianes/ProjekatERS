@@ -47,6 +47,7 @@ namespace Distribution_centar
             this.Cena = 50;
             _ = Server_Start(); // Pokretanje servera u konstruktoru
             _ = Process_Consumer(); // Pokretanje task za obradu consumera
+            _ = Process_Powerplant(); // Pokretanje taska za obradu powerplanta
         }
 
         public double Potrebno_energije { get => potrebno_energije; set => potrebno_energije = value; }
@@ -73,10 +74,10 @@ namespace Distribution_centar
                 var task_powerplant = await Server_Recieve_Powerplant(8001);
                 var task_solar_wind = await Server_Recieve_Solar_wind(8002);
                 //Task.WaitAll(task_consumer, task_powerplant, task_solar_wind);
-                Task.WaitAll(task_consumer);
+                Task.WaitAll(task_consumer,task_powerplant);
                 File.WriteAllText("Log\\log_distribution_center.txt", "Distribution center krece sa radom!\n");
                 Server_Send(Stream_consumer, "1");
-               // Server_Send(Stream_powerplant, "1");
+                Server_Send(Stream_powerplant, "1");
                 //Server_Send(Stream_solar_wind, "1");
 
             }
@@ -280,9 +281,9 @@ namespace Distribution_centar
         // na pocetku poruke se salje kod koji oznaca radnju koju server treba da odradi,
         // 1-prvo pokretanje,2 - dodavanje 1 potrosca, 3- brisanje potrosca, 4 - izmena nekog potrosca 5- vracanje izvestaja svih potrosca,
         // 6- vracanje izvestaja 1 potrosaca, 7- gasenje programa
-        private async Task<Task> Process_Consumer()
+        private async Task Process_Consumer()
         {
-            var task = Task.Factory.StartNew(() => {
+            await Task.Factory.StartNew(() => {
                 while (true)
                 {
                     if(Flag_consumer != 1)
@@ -358,7 +359,7 @@ namespace Distribution_centar
                     if (int.Parse(last_received_message_consumer.Split(";")[0]) == 7)
                     {
                         Console.WriteLine("\n*****PROGRAM SE GASI!!!*****");
-                        // Server_Send(Stream_powerplant, "STOP", "7");
+                        Server_Send(Stream_powerplant, "STOP", "7");
                         //Server_Send(Stream_solar_wind, "STOP", "7");
                         WriteToFile("SERVER SE GASI!", "Log\\log_distribution_center.txt");
                         Environment.Exit(0);
@@ -369,7 +370,29 @@ namespace Distribution_centar
 
                 }
             });
-            return await Task.FromResult(task);
+        }
+        private async Task  Process_Powerplant()
+        {
+            await Task.Factory.StartNew(() =>
+            {
+                while (true)
+                {
+                    if(flag_powerplant != 1)
+                    {
+                        continue;
+                    }
+                    if (int.Parse(last_received_message_powerplant.Split(";")[0]) == 1)
+                    {
+                        powerplant.Snaga = double.Parse(last_received_message_powerplant.Split(";")[1]);
+                        continue;
+                    }
+                    if (int.Parse(last_received_message_powerplant.Split(";")[0]) == 2)
+                    {
+                        powerplant.Procenat_rada = double.Parse(last_received_message_powerplant.Split(";")[1]);
+                    }
+                }
+            });
+            
         }
         public bool WriteToFile(string msg, string path)
         {

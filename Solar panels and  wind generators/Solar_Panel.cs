@@ -8,6 +8,10 @@ namespace Distribution_centar
     {
         private double snaga_panela;
 
+        public Solar_Panel()
+        {
+        }
+
         public Solar_Panel(double snaga_panela)
         {
             this.Snaga_panela = snaga_panela;

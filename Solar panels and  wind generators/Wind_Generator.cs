@@ -8,6 +8,10 @@ namespace Distribution_centar
     {
         private double snaga_generatora;
 
+        public Wind_Generator()
+        {
+        }
+
         public Wind_Generator(double snaga_generatora)
         {
             this.Snaga_generatora = snaga_generatora;

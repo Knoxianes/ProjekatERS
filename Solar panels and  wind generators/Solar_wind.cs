@@ -7,86 +7,55 @@ using System.Timers;
 using System.Data.SqlClient;
 using System.IO;
 
-namespace Distribution_centar
+namespace Solar_panels_and__wind_generators
 {
     class Solar_wind
     {
         private Solar_Panel panel;
         private Wind_Generator generator;
         private Timer timer;
+        private DataBase db;
+        private int interval;
 
-        public Solar_Panel Panel { get => panel; set => panel = value; }
-        public Wind_Generator Generator { get => generator; set => generator = value; }
+        internal Solar_Panel Panel { get => panel; set => panel = value; }
+        internal Wind_Generator Generator { get => generator; set => generator = value; }
         public Timer Timer { get => timer; set => timer = value; }
+        internal DataBase Db { get => db; set => db = value; }
+        public int Interval { get => interval; set => interval = value; }
 
         public Solar_wind()
         {
             Panel = new Solar_Panel();
             Generator = new Wind_Generator();
-            Timer = new Timer();                  
-            Korisnik_ui();
-            Ponavljanje();            //promena vrednosti snage na odredjeno vreme
-
-        }
-
-        public void Korisnik_ui()
-        {
-            int sunce;
-            Console.WriteLine("Unesite vrednost snage sunca (broj od 0 do 100):");
-            while (!(int.TryParse(Console.ReadLine(), out sunce)) || (sunce < 0 || sunce > 100))
-            {
-                Console.WriteLine("Nije uneta ispravna vrednost unesite opet: ");
-            }            
-
-            //slucajno generisanje vrednosti snage vetra 
-            Random random = new Random();
-            int vetar = random.Next(0, 101);
-            Console.WriteLine("Vrednost snage vetra je: " + vetar);
-
-            Panel = new Solar_Panel(350 * sunce / 100);
-            Generator = new Wind_Generator(8200 * vetar / 100);
-
-           
-            Console.WriteLine("Ukupna snaga je: " + Ukupna_snaga(Panel.Snaga_panela, Generator.Snaga_generatora));
-
-            //DODAVANJE U BAZU 
-            double p = Panel.Snaga_panela;
-            double g = Generator.Snaga_generatora;            
-            string vreme = DateTime.Now.ToString("HH:mm:ss tt");
-
-            //uzimamo relativnu putanju
-            string relativePath = @"..\..\Database1.mdf";
-            string absolutePath = Path.GetFullPath(relativePath);
-
-            string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
-
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlCommand  command = new SqlCommand("insert into [Table] (Energija_Sunca,Energija_Vetra,Panel,Generator,Timestamp) values ('"+sunce+"', '"+vetar+"', '"+p+"', '"+g+"', '"+vreme+"')", connection);
-            
-            connection.Open();
-            command.ExecuteNonQuery();           
+            Timer = new Timer();
+            Db = new DataBase();
+            interval = UcitatiInterval();
         }
 
         public void Ponavljanje()
         {
-            //menjamo vrednosti na odredjeno vreme                                
-            Timer.Elapsed += new ElapsedEventHandler(Na_vreme);         //kazemo sta radi timer po isteku intervala
-            Timer.Interval = 3000;                                      //postavimo interval
-            Timer.Enabled = true;                                       //pokrenemo ga
+            //menjamo vrednosti na odredjeno vreme
+            Timer timer = new Timer();
+            timer.Elapsed += new ElapsedEventHandler(GenerateRandomValues); //kazemo sta radi timer po isteku intervala
+            timer.Interval = Interval;                                      //postavimo interval
+            timer.Enabled = true;                                       //pokrenemo ga
         }
-
-        //ista metoda kao korisnik_ui samo se ponavlja na odredjeno vreme
-        public void Na_vreme(object source, ElapsedEventArgs evArgs)
+        public void GenerateRandomValues(object source, ElapsedEventArgs evArgs)
         {
-            Timer.Stop();               //ako korisniku treba malo vise vremena da ukuca nego sto traje interval
-            Korisnik_ui();
-            Timer.Start();
+            Random random = new Random();
+            double sunce = random.NextDouble() * 101;
+            double vetar = random.NextDouble() * 101;
+            Panel.Snaga_panela = 350 * sunce / 100;
+            generator.Snaga_generatora = 8200 * vetar / 100;
+            Console.WriteLine("Snaga panela je: " + Math.Round(panel.Snaga_panela,2));
+            Console.WriteLine("Snaga generatora je: " + Math.Round(generator.Snaga_generatora,2));
+            string vreme = DateTime.Now.ToString("HH:mm:ss tt");
+            var command = "insert into Solar_Wind (Energija_Sunca,Energija_Vetra,Panel,Generator,Timestamp) values ('" + Math.Round(sunce,2) + "', '" + Math.Round(vetar,2) + "', '" + Math.Round(panel.Snaga_panela,2) + "', '" + Math.Round(generator.Snaga_generatora,2) + "', '" + vreme + "')";
+            db.SendCommand(command);
         }
-
-        //racunanje ukupne snage koju proizvode
-        public double Ukupna_snaga(double snaga_panela, double snaga_generatora)
+        private int UcitatiInterval()
         {
-            return snaga_panela + snaga_generatora;
+            return 3000;
         }
     }
 }

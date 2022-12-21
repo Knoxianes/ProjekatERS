@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zlatko\\Desktop\\Projekat\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {}
+    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zlatko\\Desktop\\Projekat\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
+    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zlatko\\Desktop\\Projekat\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
+        "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
         "projectName": "Solar panels and  wind generators",
-        "projectPath": "C:\\Users\\Zlatko\\Desktop\\Projekat\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
-        "packagesPath": "C:\\Users\\Zlatko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zlatko\\Desktop\\Projekat\\ProjekatERS\\Solar panels and  wind generators\\obj\\",
+        "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
+        "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Zlatko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     }

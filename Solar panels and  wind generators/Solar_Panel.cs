@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Distribution_centar
+namespace Solar_panels_and__wind_generators
 {
     class Solar_Panel
     {

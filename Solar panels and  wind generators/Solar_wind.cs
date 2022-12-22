@@ -6,6 +6,7 @@ using System.Text;
 using System.Timers;
 using System.Data.SqlClient;
 using System.IO;
+using System.Configuration;
 
 namespace Solar_panels_and__wind_generators
 {
@@ -29,7 +30,8 @@ namespace Solar_panels_and__wind_generators
             Generator = new Wind_Generator();
             Timer = new Timer();
             Db = new DataBase();
-            interval = UcitatiInterval();
+            Interval = int.Parse(ConfigurationManager.AppSettings["interval"]);
+            
         }
 
         public void Ponavljanje()
@@ -52,10 +54,6 @@ namespace Solar_panels_and__wind_generators
             string vreme = DateTime.Now.ToString("HH:mm:ss tt");
             var command = "insert into Solar_Wind (Energija_Sunca,Energija_Vetra,Panel,Generator,Timestamp) values ('" + Math.Round(sunce,2) + "', '" + Math.Round(vetar,2) + "', '" + Math.Round(panel.Snaga_panela,2) + "', '" + Math.Round(generator.Snaga_generatora,2) + "', '" + vreme + "')";
             db.SendCommand(command);
-        }
-        private int UcitatiInterval()
-        {
-            return 3000;
         }
     }
 }

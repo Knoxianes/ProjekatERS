@@ -103,3 +103,4 @@ C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bi
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll.config

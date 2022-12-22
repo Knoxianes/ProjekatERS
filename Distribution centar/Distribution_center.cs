@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Distribution_centar
 {
@@ -69,7 +70,7 @@ namespace Distribution_centar
         {
             try
             {
-                var task_consumer = await Server_Recieve_Consumer( 8000);
+                var task_consumer = await Server_Recieve_Consumer(8000);
                 var task_powerplant = await Server_Recieve_Powerplant(8001);
                 var task_solar_wind = await Server_Recieve_Solar_wind(8002);
                 //Task.WaitAll(task_consumer, task_powerplant, task_solar_wind);
@@ -143,7 +144,7 @@ namespace Distribution_centar
                             Flag_powerplant = 1;                                                          // Postavlja flag na 1 da bi program znao da je stigla poruka da moze da je obradi
                             // Console.WriteLine(last_received_message_powerplant);
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             Console.WriteLine("Greska prilikom prijema poruke: " + e);
                             Environment.Exit(2);
@@ -392,10 +393,22 @@ namespace Distribution_centar
                 "\n\tTrenutno stanje u celoj mrezi:\n" +
                 "\tPotrebno energije: " + Potrebno_energije + "\n" +
                 "\tTrenutna prozivodnja: " + trenutna_proizvodnja +
-                solar_wind.ToString()+
-                powerplant.ToString()+
-                izvestaj.ToString()+
+                solar_wind.ToString() +
+                powerplant.ToString() +
+                izvestaj.ToString() +
                 "\n_______________\n";
+        }
+
+        public void LogFile(string tekst)
+        {
+            //otvara fajl za pisanje i stavlja u promenljivu file
+            StreamWriter file = new StreamWriter("log.txt", true);          //Ako zelimo da zapisujemo dogadjaje u fajl u realnom vremenu, mozemo otvoriti fajl pri svakom pozivu i zatvoriti ga nakon sto zapisemo dogadjaj.
+
+            //zapisuje liniju teksta u fajl 
+            file.WriteLine(tekst);
+
+            //zatvaranje fajla
+            file.Close(); 
         }
     }
 }

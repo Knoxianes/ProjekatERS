@@ -7,7 +7,7 @@ namespace Distribution_centar
     class Powerplant
     {
         private double snaga;
-        private uint procenat_rada;
+        private double procenat_rada;
 
         public Powerplant()
         {
@@ -15,7 +15,7 @@ namespace Distribution_centar
             this.Procenat_rada = 0;
         }
 
-        public uint Procenat_rada { get => procenat_rada; set => procenat_rada = value; }
+        public double Procenat_rada { get => procenat_rada; set => procenat_rada = value; }
         public double Snaga { get => snaga; set => snaga = value; }
 
         public override string ToString()

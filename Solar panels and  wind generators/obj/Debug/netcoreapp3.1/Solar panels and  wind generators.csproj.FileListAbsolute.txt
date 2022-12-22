@@ -104,3 +104,21 @@ C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bi
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll.config
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\DevDefined.OAuth.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Core.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Data.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.DataService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Diagnostics.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.EntitlementService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Exception.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.GlobalTaxService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.LinqExtender.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.OAuth2PlatformClient.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.QueryFilter.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.ReportService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Retry.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Security.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Utility.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.WebHooksService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\IppDotNetSdkForQuickBooksApiV3.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

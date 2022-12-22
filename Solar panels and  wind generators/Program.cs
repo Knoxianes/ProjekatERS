@@ -15,13 +15,14 @@ namespace Solar_panels_and__wind_generators
     {
         static void Main(string[] args)
         {
+            Client client = new Client();
             Solar_wind solar_wind = new Solar_wind();
-            Korisnik_ui(solar_wind.Panel, solar_wind.Generator, solar_wind.Db);
+            Korisnik_ui(solar_wind.Panel, solar_wind.Generator, solar_wind.Db,client);
             solar_wind.Ponavljanje();
             while (true) { }
 
         }
-       static public void Korisnik_ui(Solar_Panel s, Wind_Generator g, DataBase db)
+       static public void Korisnik_ui(Solar_Panel s, Wind_Generator g, DataBase db,Client client)
         {
             double sunce, vetar;
             Console.WriteLine("Unesite procenat snage sunca (broj od 0 do 100):");

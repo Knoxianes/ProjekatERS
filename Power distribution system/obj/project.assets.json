@@ -14,6 +14,49 @@
           "lib/netstandard2.1/Castle.Core.dll": {}
         }
       },
+      "IppDotNetSdkForQuickBooksApiV3.SV/7.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net461/DevDefined.OAuth.dll": {},
+          "lib/net461/Intuit.Ipp.Core.dll": {},
+          "lib/net461/Intuit.Ipp.Data.dll": {},
+          "lib/net461/Intuit.Ipp.DataService.dll": {},
+          "lib/net461/Intuit.Ipp.Diagnostics.dll": {},
+          "lib/net461/Intuit.Ipp.EntitlementService.dll": {},
+          "lib/net461/Intuit.Ipp.Exception.dll": {},
+          "lib/net461/Intuit.Ipp.GlobalTaxService.dll": {},
+          "lib/net461/Intuit.Ipp.LinqExtender.dll": {},
+          "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll": {},
+          "lib/net461/Intuit.Ipp.QueryFilter.dll": {},
+          "lib/net461/Intuit.Ipp.ReportService.dll": {},
+          "lib/net461/Intuit.Ipp.Retry.dll": {},
+          "lib/net461/Intuit.Ipp.Security.dll": {},
+          "lib/net461/Intuit.Ipp.Utility.dll": {},
+          "lib/net461/Intuit.Ipp.WebHooksService.dll": {},
+          "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll": {},
+          "lib/net461/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net461/DevDefined.OAuth.dll": {},
+          "lib/net461/Intuit.Ipp.Core.dll": {},
+          "lib/net461/Intuit.Ipp.Data.dll": {},
+          "lib/net461/Intuit.Ipp.DataService.dll": {},
+          "lib/net461/Intuit.Ipp.Diagnostics.dll": {},
+          "lib/net461/Intuit.Ipp.EntitlementService.dll": {},
+          "lib/net461/Intuit.Ipp.Exception.dll": {},
+          "lib/net461/Intuit.Ipp.GlobalTaxService.dll": {},
+          "lib/net461/Intuit.Ipp.LinqExtender.dll": {},
+          "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll": {},
+          "lib/net461/Intuit.Ipp.QueryFilter.dll": {},
+          "lib/net461/Intuit.Ipp.ReportService.dll": {},
+          "lib/net461/Intuit.Ipp.Retry.dll": {},
+          "lib/net461/Intuit.Ipp.Security.dll": {},
+          "lib/net461/Intuit.Ipp.Utility.dll": {},
+          "lib/net461/Intuit.Ipp.WebHooksService.dll": {},
+          "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll": {},
+          "lib/net461/Newtonsoft.Json.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -636,6 +679,71 @@
         "lib/netstandard2.1/Castle.Core.dll",
         "lib/netstandard2.1/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "IppDotNetSdkForQuickBooksApiV3.SV/7.5.1": {
+      "sha512": "ScEwXFNbyJb4XDDutC0VnJfWFGmvv3IXloHzr8eyLCSUMkK7JcGka3VTH0uVEAhbFRzoueF9ANF+YyxkhRCzmQ==",
+      "type": "package",
+      "path": "ippdotnetsdkforquickbooksapiv3.sv/7.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ippdotnetsdkforquickbooksapiv3.sv.7.5.1.nupkg.sha512",
+        "ippdotnetsdkforquickbooksapiv3.sv.nuspec",
+        "lib/net461/DevDefined.OAuth.dll",
+        "lib/net461/DevDefined.OAuth.pdb",
+        "lib/net461/DevDefined.OAuth.xml",
+        "lib/net461/Intuit.Ipp.Core.dll",
+        "lib/net461/Intuit.Ipp.Core.pdb",
+        "lib/net461/Intuit.Ipp.Core.xml",
+        "lib/net461/Intuit.Ipp.Data.dll",
+        "lib/net461/Intuit.Ipp.Data.pdb",
+        "lib/net461/Intuit.Ipp.Data.xml",
+        "lib/net461/Intuit.Ipp.DataService.dll",
+        "lib/net461/Intuit.Ipp.DataService.pdb",
+        "lib/net461/Intuit.Ipp.DataService.xml",
+        "lib/net461/Intuit.Ipp.Diagnostics.dll",
+        "lib/net461/Intuit.Ipp.Diagnostics.pdb",
+        "lib/net461/Intuit.Ipp.Diagnostics.xml",
+        "lib/net461/Intuit.Ipp.EntitlementService.dll",
+        "lib/net461/Intuit.Ipp.EntitlementService.pdb",
+        "lib/net461/Intuit.Ipp.EntitlementService.xml",
+        "lib/net461/Intuit.Ipp.Exception.dll",
+        "lib/net461/Intuit.Ipp.Exception.pdb",
+        "lib/net461/Intuit.Ipp.Exception.xml",
+        "lib/net461/Intuit.Ipp.GlobalTaxService.dll",
+        "lib/net461/Intuit.Ipp.GlobalTaxService.pdb",
+        "lib/net461/Intuit.Ipp.GlobalTaxService.xml",
+        "lib/net461/Intuit.Ipp.LinqExtender.dll",
+        "lib/net461/Intuit.Ipp.LinqExtender.pdb",
+        "lib/net461/Intuit.Ipp.LinqExtender.xml",
+        "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll",
+        "lib/net461/Intuit.Ipp.OAuth2PlatformClient.pdb",
+        "lib/net461/Intuit.Ipp.OAuth2PlatformClient.xml",
+        "lib/net461/Intuit.Ipp.QueryFilter.dll",
+        "lib/net461/Intuit.Ipp.QueryFilter.pdb",
+        "lib/net461/Intuit.Ipp.QueryFilter.xml",
+        "lib/net461/Intuit.Ipp.ReportService.dll",
+        "lib/net461/Intuit.Ipp.ReportService.pdb",
+        "lib/net461/Intuit.Ipp.ReportService.xml",
+        "lib/net461/Intuit.Ipp.Retry.dll",
+        "lib/net461/Intuit.Ipp.Retry.pdb",
+        "lib/net461/Intuit.Ipp.Retry.xml",
+        "lib/net461/Intuit.Ipp.Security.dll",
+        "lib/net461/Intuit.Ipp.Security.pdb",
+        "lib/net461/Intuit.Ipp.Security.xml",
+        "lib/net461/Intuit.Ipp.Utility.dll",
+        "lib/net461/Intuit.Ipp.Utility.pdb",
+        "lib/net461/Intuit.Ipp.Utility.xml",
+        "lib/net461/Intuit.Ipp.WebHooksService.dll",
+        "lib/net461/Intuit.Ipp.WebHooksService.pdb",
+        "lib/net461/Intuit.Ipp.WebHooksService.xml",
+        "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll",
+        "lib/net461/IppDotNetSdkForQuickBooksApiV3.pdb",
+        "lib/net461/IppDotNetSdkForQuickBooksApiV3.xml",
+        "lib/net461/Newtonsoft.Json.dll",
+        "lib/net461/Newtonsoft.Json.pdb",
+        "lib/net461/Newtonsoft.Json.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
@@ -1721,6 +1829,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "IppDotNetSdkForQuickBooksApiV3.SV >= 7.5.1",
       "Microsoft.EntityFrameworkCore >= 3.1.32",
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.32",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.32",
@@ -1774,6 +1883,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "IppDotNetSdkForQuickBooksApiV3.SV": {
+            "target": "Package",
+            "version": "[7.5.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.32, )"
@@ -1821,5 +1934,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IppDotNetSdkForQuickBooksApiV3.SV 7.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "IppDotNetSdkForQuickBooksApiV3.SV",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

@@ -21,7 +21,6 @@ namespace Solar_panels_and__wind_generators
         {
             string relativePath = @"..\..\Database1.mdf";
             string absolutePath = Path.GetFullPath(relativePath);
-
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
             connection = new SqlConnection(connectionString);
             SendCommand("DROP TABLE Solar_Wind");

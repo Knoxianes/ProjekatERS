@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cONb8h6DGLBAxNSgr/UnI8IHOCufjenaA+DDq0t3Bfpd7QsFo77YTs7wSdOyypSd2g39c7BjmREtjSD4jMAGxg==",
+  "dgSpecHash": "HLhH8pCHmCHmxyKiyxc1HhErX9LtbqdaJ82HKZ3TahdjmxPIGtLi2Xzh5hEa6q1MKeed2REJlHVmbbUuqGjEUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\strah\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\strah\\.nuget\\packages\\ippdotnetsdkforquickbooksapiv3.sv\\7.5.1\\ippdotnetsdkforquickbooksapiv3.sv.7.5.1.nupkg.sha512",
     "C:\\Users\\strah\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\strah\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\strah\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -24,5 +25,16 @@
     "C:\\Users\\strah\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\strah\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IppDotNetSdkForQuickBooksApiV3.SV 7.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "IppDotNetSdkForQuickBooksApiV3.SV",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

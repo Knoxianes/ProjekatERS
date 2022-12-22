@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
-using System.Text;
+using System.Diagnostics;
+
 
 namespace Solar_panels_and__wind_generators
 {
@@ -23,10 +23,14 @@ namespace Solar_panels_and__wind_generators
             string absolutePath = Path.GetFullPath(relativePath);
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
             connection = new SqlConnection(connectionString);
-            SendCommand("DROP TABLE Solar_Wind");
-            string createTableSql = "CREATE TABLE Solar_Wind ( Energija_Sunca decimal(13,2),Energija_Vetra decimal(13,2),Panel decimal(13,2),Generator decimal(13,2), Timestamp varchar(255));";
-            SendCommand(createTableSql);
-
+            var broj_instanci = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length;
+            
+            if(broj_instanci <= 1)
+            {
+                SendCommand("DROP TABLE Solar_Wind");
+                string createTableSql = "CREATE TABLE Solar_Wind ( Energija_Sunca decimal(13,2),Energija_Vetra decimal(13,2),Panel decimal(13,2),Generator decimal(13,2), Timestamp varchar(255));";
+                SendCommand(createTableSql);
+            }
         }
         public void SendCommand(string command)
         {
@@ -39,6 +43,7 @@ namespace Solar_panels_and__wind_generators
             }catch (Exception e)
             {
                 Console.WriteLine("Komanda neuspesno poslata u bazu podataka! "  + e);
+                connection.Close();
             }
         }
     }

@@ -11,10 +11,9 @@ namespace Distribution_centar
     public class Distribution_center
     {
         private Izvestaj izvestaj;
-        private Solar_wind solar_wind;
+        private List<Solar_wind> solar_wind;
         private Powerplant powerplant;
         private double trenutna_proizvodnja;
-        private double max_energije;
         private double potrebno_energije;
         private NetworkStream stream_consumer;
         private NetworkStream stream_powerplant;
@@ -27,10 +26,9 @@ namespace Distribution_centar
         public Distribution_center()
         {
             this.izvestaj = new Izvestaj();
-            this.solar_wind = new Solar_wind();
+            this.solar_wind = new List<Solar_wind>();
             this.powerplant = new Powerplant();
             this.Trenutna_proizvodnja = 0;
-            this.Max_energije = 10000;
             this.Potrebno_energije = 0;
             this.Stream_consumer = null;
             this.Stream_powerplant = null;
@@ -46,7 +44,6 @@ namespace Distribution_centar
         }
 
         public double Potrebno_energije { get => potrebno_energije; set => potrebno_energije = value; }
-        public double Max_energije { get => max_energije; set => max_energije = value; }
         public double Trenutna_proizvodnja { get => trenutna_proizvodnja; set => trenutna_proizvodnja = value; }
         public NetworkStream Stream_consumer { get => stream_consumer; set => stream_consumer = value; }
         public NetworkStream Stream_powerplant { get => stream_powerplant; set => stream_powerplant = value; }
@@ -171,6 +168,7 @@ namespace Distribution_centar
                         Console.WriteLine("Client Solar_wind konektovan");
                         stream_solar_wind.Add(client.GetStream());
                         last_received_message_solar_wind.Add("");
+                        solar_wind.Add(new Solar_wind());
                         index = stream_solar_wind.Count - 1;
                         _ = Solar_Wind_Recieve(index);
                     }
@@ -302,8 +300,10 @@ namespace Distribution_centar
                             Popunjavanje_Potrosaca(1);
                             izvestaj.Izracunaj_izvestaj();
                             Server_Send(Stream_consumer, "Done");
-                           
-                        }catch (Exception e)
+                            Server_Send(stream_powerplant, (potrebno_energije - trenutna_proizvodnja).ToString(), "2");
+
+                    }
+                    catch (Exception e)
                         {
                             Console.WriteLine("Doslo je do greske prilikom obrade prve poruke potrosaca: " + e);
                             Environment.Exit(11);
@@ -314,22 +314,25 @@ namespace Distribution_centar
                         Popunjavanje_Potrosaca(2);
                         izvestaj.Izracunaj_izvestaj();
                         Server_Send(Stream_consumer, "Done");
-                       
-                        
+                        Server_Send(stream_powerplant, (potrebno_energije - trenutna_proizvodnja).ToString(), "2");
+
+
                     }
                     else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 3)
                     {
                         Popunjavanje_Potrosaca(3);
                         izvestaj.Izracunaj_izvestaj();
                         Server_Send(Stream_consumer, "Done");
-                        
-                    }
+                        Server_Send(stream_powerplant, (potrebno_energije - trenutna_proizvodnja).ToString(), "2");
+
+                   }
                     else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 4)
                     {
                         Popunjavanje_Potrosaca(4);
                         izvestaj.Izracunaj_izvestaj();
                         Server_Send(Stream_consumer, "Done");
-                       
+                        Server_Send(stream_powerplant, (potrebno_energije - trenutna_proizvodnja).ToString(), "2");
+
                     }
                     else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 5)
                     {
@@ -361,7 +364,7 @@ namespace Distribution_centar
                         Server_Send(Stream_powerplant, "STOP", "7");
                         for (int i = 0; i < stream_solar_wind.Count; i++)
                         {
-                            //Server_Send(stream_solar_wind[0], "STOP", "7");
+                            Server_Send(stream_solar_wind[i], "STOP", "7");
                         }
                         WriteToFile("SERVER SE GASI!", "Log\\log_distribution_center.txt");
                         Environment.Exit(0);
@@ -391,25 +394,38 @@ namespace Distribution_centar
                 var tmp = last_received_message_solar_wind[index].Split(";");
                 if(int.Parse(tmp[0]) == 1)
                 {
-
+                    solar_wind[index].Snaga = double.Parse(tmp[1]);
+                    trenutna_proizvodnja += double.Parse(tmp[1]);
+                    Server_Send(stream_powerplant, (potrebno_energije - trenutna_proizvodnja).ToString(), "2");
+                }
+                else if (int.Parse(tmp[0]) == 2)
+                {
+                    trenutna_proizvodnja -= solar_wind[index].Snaga;
+                    solar_wind[index].Snaga = double.Parse(tmp[1]);
+                    trenutna_proizvodnja += double.Parse(tmp[1]);
+                    Server_Send(stream_powerplant, (potrebno_energije - trenutna_proizvodnja).ToString(), "2");
                 }
             }
             );
         }
-        public bool WriteToFile(string msg, string path)
+        public async Task WriteToFile(string msg, string path)
         {
-            try
+            await Task.Factory.StartNew(() =>
             {
-                using StreamWriter w = new StreamWriter(path, append: true);
-                w.WriteLine(msg);
-                w.Close();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Doslo je do greske prilikom pisanja u fajl! " + e);
-                return false;
-            }
+                
+                try
+                {
+                    using StreamWriter w = new StreamWriter(path, append: true);
+                    w.WriteLine(msg);
+                    w.Close();
+
+                }
+                catch (Exception e)
+                {
+                   
+                }
+            });
+           
         }
         public override string ToString()
         {

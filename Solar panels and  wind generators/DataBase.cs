@@ -17,21 +17,25 @@ namespace Solar_panels_and__wind_generators
 
         public SqlConnection Connection { get => connection; set => connection = value; }
 
+
+        //Funkcija se povezuje sa bazom podataka i pravi novu tabelu
         private void StartDB()
         {
             string relativePath = @"..\..\Database1.mdf";
             string absolutePath = Path.GetFullPath(relativePath);
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
             connection = new SqlConnection(connectionString);
-            var broj_instanci = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length;
+            var broj_instanci = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length; // Nalazi broj instanci programa
             
-            if(broj_instanci <= 1)
+            if(broj_instanci <= 1) // Ako je broj instanci 1 ili manji od 1 pokrece brisanje i pravljenje nove tabele u bazi
             {
                 SendCommand("DROP TABLE Solar_Wind");
                 string createTableSql = "CREATE TABLE Solar_Wind ( Energija_Sunca decimal(13,2),Energija_Vetra decimal(13,2),Panel decimal(13,2),Generator decimal(13,2), Timestamp varchar(255));";
                 SendCommand(createTableSql);
             }
         }
+
+        // Funkcija salje komandu u bazu
         public void SendCommand(string command)
         {
             try

@@ -8,7 +8,7 @@ namespace Consumer
         static void Main(string[] args)
         {
             Client client = new Client();
-            int tmp = int.Parse(client.Recieve());
+            int tmp = int.Parse(client.Recieve()); //Cekamo recive posto server salje 1 kada se svi klijenti connectuju da mogu da krenu da radom
             if(tmp != 1)
             {
                 Console.WriteLine("Greska prilikom  startovanja servera!");
@@ -48,11 +48,13 @@ namespace Consumer
                 int broj_sporeta = int.Parse(Console.ReadLine());
                 Console.WriteLine("\nZa potrosca " + i + " koliko zelite frizidera?");
                 int broj_frizidera = int.Parse(Console.ReadLine());
-                msg = msg + ";" + Izracunaj_Potrosnju(broj_televizora, broj_sporeta, broj_frizidera);
+                msg = msg + ";" + Izracunaj_Potrosnju(broj_televizora, broj_sporeta, broj_frizidera); //  Koristi se ; delimiter za slanje poruke
+                Console.Clear();
             }
             
-            client.Send(msg, "1");
+            client.Send(msg, "1"); // Serveru se salje ukupna potrosnja plus kod 1 da bi znao da je ovo prvo pokretanje clienta potrosac
             File.WriteAllText("Log\\log_consumer.txt", "Ka serveru je poslata poruka:" + msg + "\n");
+            
         }
         
 
@@ -80,24 +82,29 @@ namespace Consumer
             Console.Write(msg +"\n");
             switch (Console.ReadKey().KeyChar){ // Svaki od kodova koji se salju su povezani sa kodovima na serverskoj strani
                 case '1':
-                    client.Send(Dodavanje_Potrosaca(),"2");
+                    client.Send(Dodavanje_Potrosaca(),"2"); // Kod 2 znaci dodavanje potrosaca
                     client.WriteToFile("Dodat je novi potrosac.", "Log\\log_consumer.txt");
                     break;
                 case '2':
-                    client.Send(Ukloniti_Potrosaca(), "3");
+                    client.Send(Ukloniti_Potrosaca(), "3"); // Kod 3 brisanje potrosaca
+                    client.WriteToFile("Uklonjen je potrosac.", "Log\\log_consumer.txt");
                     break;
                 case '3':
-                    client.Send(Izmeniti_Potrosaca(), "4");
+                    client.Send(Izmeniti_Potrosaca(), "4"); // Kod 4 izmena posojeceg potrosaca
+                    client.WriteToFile("Izmenjen je potrosac.", "Log\\log_consumer.txt");
                     break;
                 case '4':
-                    client.Send("", "5");
+                    client.Send("", "5"); // Kod 5 ispis svih potrosca
+                    client.WriteToFile("Poslat je zahtev za ispis svih potrosaca.", "Log\\log_consumer.txt");
                     break;
                 case '5':
-                    client.Send(Istampati_Potrosaca(), "6");
+                    client.Send(Istampati_Potrosaca(), "6"); // Kod 6 ispis jednog potrosca
+                    client.WriteToFile("Poslat je zahtev za ispis jednog potrosaca.", "Log\\log_consumer.txt");
                     break;
                 case '6':
-                    client.Send("", "7");
+                    client.Send("", "7"); // Kod 7 gasenje svih programa
                     Console.WriteLine("\n * ****PROGRAM SE GASI!!! * ****");
+                    client.WriteToFile("PROGRAM SE GASI", "Log\\log_consumer.txt");
                     Environment.Exit(0);
                     break;
                 }

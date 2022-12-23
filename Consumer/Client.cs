@@ -8,7 +8,7 @@ namespace Consumer
 {
     class Client
     {
-        private NetworkStream stream; //stream za slanje i primanje poruka
+        private NetworkStream stream; //Stream za slanje i primanje poruka
 
         public Client()
         {

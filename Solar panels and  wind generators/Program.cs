@@ -24,6 +24,8 @@ namespace Solar_panels_and__wind_generators
             }
 
         }
+
+        //Funkcija pokrece korisnicki ui prilikom prvog pokretanja programa
        static public void Korisnik_ui(Solar_Panel s, Wind_Generator g, DataBase db,Client client)
         {
             double sunce, vetar;
@@ -41,11 +43,13 @@ namespace Solar_panels_and__wind_generators
             g.Snaga_generatora = 8200 * vetar / 100;
             Console.WriteLine("Snaga panela je: " + Math.Round(s.Snaga_panela,2));
             Console.WriteLine("Snaga generatora je: " + Math.Round(g.Snaga_generatora,2));
-            client.Send((s.Snaga_panela+g.Snaga_generatora).ToString(),"1");
+            client.Send((s.Snaga_panela+g.Snaga_generatora).ToString(),"1"); // Slanje snage solarnih panela i vetro generatora serveru prilikom prvog pokretanja programa zato je kod 1
             string vreme = DateTime.Now.ToString("HH:mm:ss tt");
             var command = "insert into Solar_Wind (Energija_Sunca,Energija_Vetra,Panel,Generator,Timestamp) values ('" + sunce + "', '" + vetar + "', '" + s.Snaga_panela + "', '" + g.Snaga_generatora + "', '" + vreme + "')";
-            db.SendCommand(command);
+            db.SendCommand(command); // Slanje komande u bazu
         }
+
+        //Funkcija koja gleda koja poruka je stigla od servera i ako je kod 7 gasi program
         static async Task Recieve(Client client)
         {
             await Task.Factory.StartNew(async() =>

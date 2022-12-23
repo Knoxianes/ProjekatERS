@@ -9,8 +9,8 @@ namespace Hydroelectric_power_plant
         private double snaga;
         private double procenat_rada;
         private double trenutna_proizvodnja;
-        private DataBase db;
-        private Client client;
+        private DataBase db; // Baza podataka elektrane
+        private Client client; // Client za konekciju sa serverom
 
         public Powerplant(double snaga)
         {

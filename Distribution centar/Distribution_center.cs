@@ -387,14 +387,14 @@ namespace Distribution_centar
                     else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 7)
                     {
                         Console.WriteLine("\n*****PROGRAM SE GASI!!!*****");
+                        
                         Server_Send(Stream_powerplant, "STOP", "7"); // Slanje poruke sa kodom 7 da se elektrana ugasi
-                        stream_powerplant.Close();
-                        stream_consumer.Close();
+                       
                         for (int i = 0; i < stream_solar_wind.Count; i++)
                         {
                         
                             Server_Send(stream_solar_wind[i], "STOP", "7"); // Slanje poruke sa kodom 7 svim solarnim panelima i vetro generatorima da se ugase
-                            stream_solar_wind[i].Close();
+                            
                         }
                         WriteToFile("SERVER SE GASI!", "Log\\log_distribution_center.txt");
                         Environment.Exit(0); // Server se gasi
@@ -442,13 +442,8 @@ namespace Distribution_centar
         }
 
         //Funckija pise u fajl iz zadatog patha
-        public async Task WriteToFile(string msg, string path)
+        public void WriteToFile(string msg, string path)
         {
-          
-            
-                 await Task.Factory.StartNew(() => // Pravljenje posebnog Task za upisivanje poruke
-                {
-
                     try
                     {
                         using StreamWriter w = new StreamWriter(path, append: true); // Otvaranje fajla
@@ -456,13 +451,12 @@ namespace Distribution_centar
                         w.Close(); //Zatvaranje fajla
                       
                     }
-                    catch (Exception e)
+                    catch 
                     {
                         
                         
                     }
-                });
-            
+
         }
         public override string ToString()
         {

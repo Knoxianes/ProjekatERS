@@ -23,6 +23,7 @@ namespace Solar_panels_and__wind_generators
         {
             string relativePath = @"..\..\Database1.mdf";
             string absolutePath = Path.GetFullPath(relativePath);
+            Console.WriteLine(absolutePath);
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
             connection = new SqlConnection(connectionString);
             var broj_instanci = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length; // Nalazi broj instanci programa

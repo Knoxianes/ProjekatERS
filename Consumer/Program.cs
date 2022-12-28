@@ -9,7 +9,7 @@ namespace Consumer
         {
             Client client = new Client();
             int tmp = int.Parse(client.Recieve()); //Cekamo recive posto server salje 1 kada se svi klijenti connectuju da mogu da krenu da radom
-            if(tmp != 1)
+            if (tmp != 1)
             {
                 Console.WriteLine("Greska prilikom  startovanja servera!");
                 Environment.Exit(1);
@@ -23,7 +23,7 @@ namespace Consumer
         }
         // Funkcija sluzi za prvo pokretanje clienta gde se unosi broj potrosaca i koliko koji potrosac trosi
         static void First_Start(Client client)
-        {   
+        {
             int broj_potrosaca;
             do
             {
@@ -40,7 +40,7 @@ namespace Consumer
                 }
             } while (true);
             string msg = broj_potrosaca.ToString();
-            for(int i = 1; i <= broj_potrosaca; i++)
+            for (int i = 1; i <= broj_potrosaca; i++)
             {
                 Console.WriteLine("\nZa potrosca " + i + " koliko zelite televizora?");
                 int broj_televizora = int.Parse(Console.ReadLine());
@@ -51,21 +51,21 @@ namespace Consumer
                 msg = msg + ";" + Izracunaj_Potrosnju(broj_televizora, broj_sporeta, broj_frizidera); //  Koristi se ; delimiter za slanje poruke
                 Console.Clear();
             }
-            
+
             client.Send(msg, "1"); // Serveru se salje ukupna potrosnja plus kod 1 da bi znao da je ovo prvo pokretanje clienta potrosac
             File.WriteAllText("Log\\log_consumer.txt", "Ka serveru je poslata poruka:" + msg + "\n");
-            
+
         }
-        
+
 
         //Funkcija izracunava potrosnju u vatima na osnovu broja tv sporeta i frizidera
-        static double Izracunaj_Potrosnju(int broj_tv,int broj_sporeta, int broj_frizidera)
+        static double Izracunaj_Potrosnju(int broj_tv, int broj_sporeta, int broj_frizidera)
         {
             return (broj_tv * 200) + (broj_sporeta * 400) + (broj_frizidera * 300);
         }
 
         //GUI nakon prvog startovanja
-        static void GUI( Client client)
+        static void GUI(Client client)
         {
             Console.Clear();
             string msg = client.Recieve();
@@ -79,10 +79,11 @@ namespace Consumer
             Console.WriteLine("\t6.Zatvoriti program");
             Console.Write("\n\n");
             Console.Write("Odgovor servera: ");
-            Console.Write(msg +"\n");
-            switch (Console.ReadKey().KeyChar){ // Svaki od kodova koji se salju su povezani sa kodovima na serverskoj strani
+            Console.Write(msg + "\n");
+            switch (Console.ReadKey().KeyChar)
+            { // Svaki od kodova koji se salju su povezani sa kodovima na serverskoj strani
                 case '1':
-                    client.Send(Dodavanje_Potrosaca(),"2"); // Kod 2 znaci dodavanje potrosaca
+                    client.Send(Dodavanje_Potrosaca(), "2"); // Kod 2 znaci dodavanje potrosaca
                     client.WriteToFile("Dodat je novi potrosac.", "Log\\log_consumer.txt");
                     break;
                 case '2':
@@ -107,9 +108,9 @@ namespace Consumer
                     client.WriteToFile("PROGRAM SE GASI", "Log\\log_consumer.txt");
                     Environment.Exit(0);
                     break;
-                }
-                
-        
+            }
+
+
         }
 
         // GUI za dodavanje potrosaca
@@ -139,7 +140,7 @@ namespace Consumer
             Console.Clear();
             Console.WriteLine("Potrosaca pod kojim ID-om zelite da izmenite?");
             string id = Console.ReadLine();
-            Console.WriteLine("Koliko potrosac "+ id + " ima televizora?");
+            Console.WriteLine("Koliko potrosac " + id + " ima televizora?");
             var broj_televizora = int.Parse(Console.ReadLine());
             Console.WriteLine("Koliko potrosac " + id + " ima sporeta?");
             var broj_sporeta = int.Parse(Console.ReadLine());

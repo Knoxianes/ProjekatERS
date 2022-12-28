@@ -1,12 +1,6 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Core.Common.CommandTrees;
 using System.Text;
-using System.Timers;
-using System.Data.SqlClient;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace Solar_panels_and__wind_generators
@@ -46,7 +40,7 @@ namespace Solar_panels_and__wind_generators
             client.Send((s.Snaga_panela+g.Snaga_generatora).ToString(),"1"); // Slanje snage solarnih panela i vetro generatora serveru prilikom prvog pokretanja programa zato je kod 1
             string vreme = DateTime.Now.ToString("HH:mm:ss tt");
             var command = "insert into Solar_Wind (Energija_Sunca,Energija_Vetra,Panel,Generator,Timestamp) values ('" + sunce + "', '" + vetar + "', '" + s.Snaga_panela + "', '" + g.Snaga_generatora + "', '" + vreme + "')";
-            db.SendCommand(command); // Slanje komande u bazu
+           // db.SendCommand(command); // Slanje komande u bazu
         }
 
         //Funkcija koja gleda koja poruka je stigla od servera i ako je kod 7 gasi program
@@ -55,8 +49,8 @@ namespace Solar_panels_and__wind_generators
             await Task.Factory.StartNew(async() =>
             {
                 byte[] buffer = new byte[1024];
-                client.Stream.Read(buffer);
-                var msg = Encoding.ASCII.GetString(buffer, 0, buffer.Length).Split(";");
+                client.Stream.Read(buffer,0,1024);
+                var msg = Encoding.ASCII.GetString(buffer, 0, buffer.Length).Split(';');
                 if(int.Parse(msg[0]) == 7)
                 {
                     Console.WriteLine("\n * ****PROGRAM SE GASI!!! * ****");

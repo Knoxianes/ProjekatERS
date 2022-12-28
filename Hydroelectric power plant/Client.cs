@@ -51,7 +51,7 @@ namespace Hydroelectric_power_plant
             try
             {
                 byte[] buffer = new byte[1024];
-                stream.Read(buffer);
+                stream.Read(buffer,0,1024);
                 return Encoding.ASCII.GetString(buffer, 0, buffer.Length);
             } catch (Exception e)
             {
@@ -64,7 +64,7 @@ namespace Hydroelectric_power_plant
         {
             try
             {
-                using  StreamWriter w = new StreamWriter(path,append:true);
+                StreamWriter w = new StreamWriter(path, append: true) ;
                 w.WriteLine(msg);
                 w.Close();
                 return true;

@@ -93,7 +93,7 @@ namespace Distribution_centar
                         try
                         {
                             byte[] buffer = new byte[1024];
-                            stream_consumer.Read(buffer);                                            //Citanje poruke ako je primljena
+                            stream_consumer.Read(buffer,0,1024);                                            //Citanje poruke ako je primljena
                             last_received_message_consumer = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
                              WriteToFile("Server je primio poruku od consumera: " + last_received_message_consumer, "Log\\log_distribution_center.txt");
                             _ = Process_Consumer(); // Pokretanje funkcije za obradu poruke od potrosaca                                       
@@ -128,7 +128,7 @@ namespace Distribution_centar
                         try
                         {
                             byte[] buffer = new byte[1024];
-                            stream_powerplant.Read(buffer);                                            //Citanje poruke ako je primljena
+                            stream_powerplant.Read(buffer,0,1024);                                            //Citanje poruke ako je primljena
                             last_received_message_powerplant = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
                              WriteToFile("Server je primio poruku od powerplanta: " + last_received_message_powerplant, "Log\\log_distribution_center.txt");
                             _ = Process_Powerplant();  //Pokretanje funkcije za bradu poruke od elektrane                                     
@@ -192,7 +192,7 @@ namespace Distribution_centar
                     try
                     {
                         byte[] buffer = new byte[1024];
-                        stream_solar_wind[index].Read(buffer); //Citanje poruke iz streama  i smestanje u buffer                                         
+                        stream_solar_wind[index].Read(buffer,0,1024); //Citanje poruke iz streama  i smestanje u buffer                                         
                         last_received_message_solar_wind[index] = Encoding.ASCII.GetString(buffer, 0, buffer.Length); //Dekodiranje poruke
                         WriteToFile("Server je primio poruku od windmill and solar panela: " + last_received_message_solar_wind[index], "Log\\log_distribution_center.txt");
                         _ = Process_Solar_Wind(index);    //Pokretanje funkcije za obradu poruke od clienta solarih panela i vetro generatora sa zadatim indeksom                                          
@@ -213,7 +213,7 @@ namespace Distribution_centar
                 {
                     if (code != "")
                     {
-                        code += ";";
+                        code += ';';
                     }
                     byte[] data = Encoding.ASCII.GetBytes(code + message); // Kodiranje poruke
                     ns.Write(data, 0, data.Length); // Slanje poruke kroz zadati stream
@@ -232,7 +232,7 @@ namespace Distribution_centar
         //Funkcija radi sve potrebne izmene, dodavanja i oduzimanja za potrosca
         private void Popunjavanje_Potrosaca(int broj)
         {
-            var tmp = last_received_message_consumer.Split(";"); // Rasclanjivanje primljene poruke 
+            var tmp = last_received_message_consumer.Split(';'); // Rasclanjivanje primljene poruke 
 
             //Svi sledeci ifovi proveravaju kod sa kojim je funkcija pozvana i na osnovu toga rade potrebnu radnju
 
@@ -316,7 +316,7 @@ namespace Distribution_centar
         {
             await Task.Factory.StartNew(() => {
                
-                    if(int.Parse(last_received_message_consumer.Split(";")[0]) == 1)
+                    if(int.Parse(last_received_message_consumer.Split(';')[0]) == 1)
                     {
                         try
                         {
@@ -332,7 +332,7 @@ namespace Distribution_centar
                             Environment.Exit(11);
                         } 
                     }
-                    else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 2)
+                    else if (int.Parse(last_received_message_consumer.Split(';')[0]) == 2)
                     {
                         Popunjavanje_Potrosaca(2);
                         izvestaj.Izracunaj_izvestaj();  // Update recnika izvestaja
@@ -342,7 +342,7 @@ namespace Distribution_centar
 
 
                 }
-                else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 3)
+                else if (int.Parse(last_received_message_consumer.Split(';')[0]) == 3)
                     {
                         Popunjavanje_Potrosaca(3);
                         izvestaj.Izracunaj_izvestaj(); // Update recnika izvestaj
@@ -351,7 +351,7 @@ namespace Distribution_centar
 
 
                 }
-                else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 4)
+                else if (int.Parse(last_received_message_consumer.Split(';')[0]) == 4)
                     {
                         Popunjavanje_Potrosaca(4);
                         izvestaj.Izracunaj_izvestaj(); // Update recnika izvestaja
@@ -360,18 +360,18 @@ namespace Distribution_centar
 
 
                 }
-                else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 5)
+                else if (int.Parse(last_received_message_consumer.Split(';')[0]) == 5)
                     {
                         WriteToFile("Server salje izvestaj potrosacima! ","Log\\log_distribution_center.txt");
                         Server_Send(Stream_consumer, izvestaj.ToString()); // Slanje celog izvestaja po potrosacima clientu potrosac
                        
                     }
-                    else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 6)
+                    else if (int.Parse(last_received_message_consumer.Split(';')[0]) == 6)
                     {
                         WriteToFile("Server salje izvestaj za jednog potrosaca!", "Log\\log_distribution_center.txt");
                         try
                         {
-                            var id = int.Parse(last_received_message_consumer.Split(";")[1]);
+                            var id = int.Parse(last_received_message_consumer.Split(';')[1]);
                             string tmp = "\n*************************************************";
                             tmp += "\nPotrosac broj: " + id + " Cena potrosnje na sat vremena: " + izvestaj.Dobiti_Cenu_Struje(id);
                             tmp += "\n*************************************************\n";
@@ -384,7 +384,7 @@ namespace Distribution_centar
                         }
 
                     }
-                    else if (int.Parse(last_received_message_consumer.Split(";")[0]) == 7)
+                    else if (int.Parse(last_received_message_consumer.Split(';')[0]) == 7)
                     {
                         Console.WriteLine("\n*****PROGRAM SE GASI!!!*****");
                         
@@ -406,14 +406,14 @@ namespace Distribution_centar
         {
             await Task.Factory.StartNew(() =>
             {
-                    if (int.Parse(last_received_message_powerplant.Split(";")[0]) == 1) // Kod 1 oznaca 1 pokretanje clienta elektrane
+                    if (int.Parse(last_received_message_powerplant.Split(';')[0]) == 1) // Kod 1 oznaca 1 pokretanje clienta elektrane
                     {
-                        powerplant.Snaga = double.Parse(last_received_message_powerplant.Split(";")[1]); // Postavljanje max snagu elektrane
+                        powerplant.Snaga = double.Parse(last_received_message_powerplant.Split(';')[1]); // Postavljanje max snagu elektrane
                         
                     }
-                    else if (int.Parse(last_received_message_powerplant.Split(";")[0]) == 2) //Kod 2 oznacava da je vec client pokrenut
+                    else if (int.Parse(last_received_message_powerplant.Split(';')[0]) == 2) //Kod 2 oznacava da je vec client pokrenut
                     {
-                        powerplant.Procenat_rada = double.Parse(last_received_message_powerplant.Split(";")[1]); // Update procenat rada elektrane
+                        powerplant.Procenat_rada = double.Parse(last_received_message_powerplant.Split(';')[1]); // Update procenat rada elektrane
                     }
             });
             
@@ -423,7 +423,7 @@ namespace Distribution_centar
         {
             await  Task.Factory.StartNew(() => 
             {
-                var tmp = last_received_message_solar_wind[index].Split(";");
+                var tmp = last_received_message_solar_wind[index].Split(';');
                 if(int.Parse(tmp[0]) == 1) // 1 Oznacava prvo pokretanje clienta solar paneli i vetro generator
                 {
                     solar_wind[index].Snaga = double.Parse(tmp[1]); 
@@ -446,7 +446,7 @@ namespace Distribution_centar
         {
                     try
                     {
-                        using StreamWriter w = new StreamWriter(path, append: true); // Otvaranje fajla
+                        StreamWriter w = new StreamWriter(path, append: true); // Otvaranje fajla
                         w.WriteLine(msg); // Pisanje poruke
                         w.Close(); //Zatvaranje fajla
                       

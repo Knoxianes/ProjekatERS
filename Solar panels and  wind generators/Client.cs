@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Solar_panels_and__wind_generators
 {
-    class Client
+    public class Client
     {
         private NetworkStream stream; //stream za slanje i primanje poruka
 
@@ -51,7 +51,7 @@ namespace Solar_panels_and__wind_generators
             try
             {
                 byte[] buffer = new byte[1024];
-                stream.Read(buffer,0,1024);
+                stream.Read(buffer);
                 return Encoding.ASCII.GetString(buffer, 0, buffer.Length);
             } catch (Exception e)
             {
@@ -64,7 +64,7 @@ namespace Solar_panels_and__wind_generators
         {
             try
             {
-                StreamWriter w = new StreamWriter(path,append:true);
+                using  StreamWriter w = new StreamWriter(path,append:true);
                 w.WriteLine(msg);
                 w.Close();
                 return true;

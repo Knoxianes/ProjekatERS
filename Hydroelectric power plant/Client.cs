@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Hydroelectric_power_plant
 {
-    class Client
+    public class Client
     {
         private NetworkStream stream; //stream za slanje i primanje poruka
 
@@ -51,7 +51,7 @@ namespace Hydroelectric_power_plant
             try
             {
                 byte[] buffer = new byte[1024];
-                stream.Read(buffer,0,1024);
+                stream.Read(buffer);
                 return Encoding.ASCII.GetString(buffer, 0, buffer.Length);
             } catch (Exception e)
             {
@@ -64,7 +64,7 @@ namespace Hydroelectric_power_plant
         {
             try
             {
-                StreamWriter w = new StreamWriter(path, append: true) ;
+                using  StreamWriter w = new StreamWriter(path,append:true);
                 w.WriteLine(msg);
                 w.Close();
                 return true;

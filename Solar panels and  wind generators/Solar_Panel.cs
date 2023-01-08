@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Solar_panels_and__wind_generators
 {
-    class Solar_Panel
+    public class Solar_Panel
     {
         private double snaga_panela;
 

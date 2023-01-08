@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Hydroelectric_power_plant
 {
-    class DataBase
+    public class DataBase
     {
         private SqlConnection connection;
 
@@ -20,14 +20,14 @@ namespace Hydroelectric_power_plant
         //Funkcija uspostavlja konekciju sa bazom podataka
         private void StartDB()
         {
-            var relativePath = Path.GetFullPath(".").Split('\\');
+            var relativePath = Path.GetFullPath(".").Split("\\");
             var tmp = new string[relativePath.Length-4];
             for(int i =0; i < relativePath.Length - 4; i++)
             {
                 tmp[i] = relativePath[i];
             }
-            string absolutePath = Path.Combine(tmp) + "\\ProjekatERS\\Solar panels and  wind generators\\bin\\Database1.mdf";
-            Console.WriteLine(absolutePath);
+            string absolutePath = Path.Combine(tmp) + "\\Solar panels and  wind generators\\bin\\Database1.mdf";
+
             
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
             connection = new SqlConnection(connectionString); // Uspotevljanje konekcije
@@ -37,7 +37,7 @@ namespace Hydroelectric_power_plant
 
         }
         // Funkcija salje komandu u bazu sa kojom smo uspotavili vezu
-        public void SendCommand(string command)
+        public bool SendCommand(string command)
         {
             try
             {
@@ -45,9 +45,11 @@ namespace Hydroelectric_power_plant
                 SqlCommand tmp = new SqlCommand(command, connection);
                 tmp.ExecuteNonQuery(); // Slanje komande
                 connection.Close(); // Zatvaranje konekcije
+                return true;
             }catch (Exception e)
             {
                 Console.WriteLine("Komanda neuspesno poslata u bazu podataka! "  + e);
+                return false;
             }
         }
     }

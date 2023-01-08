@@ -4,12 +4,14 @@ using System.Text;
 
 namespace Distribution_centar
 {
-    class Izvestaj
+    public class Izvestaj
     {
         private List<Potrosac> potrosaci; // Lista svih potrosca
-        private Dictionary<int,double> izvestaj; // Dicitonary id potrosca i ukupno vati koliko imaju
+        public Dictionary<int,double> izvestaj; // Dicitonary id potrosca i ukupno vati koliko imaju
 
-        internal List<Potrosac> Potrosaci { get => potrosaci; set => potrosaci = value; }
+
+         
+        public List<Potrosac> Potrosaci { get => potrosaci; set => potrosaci = value; }
 
         public Izvestaj()
         {

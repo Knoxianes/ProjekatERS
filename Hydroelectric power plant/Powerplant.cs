@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hydroelectric_power_plant
 {
-    class Powerplant
+    public class Powerplant
     {
         private double snaga;
         private double procenat_rada;

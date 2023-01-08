@@ -6,24 +6,23 @@ using System.Text;
 
 namespace Consumer
 {
-    class Client
+    public class Client
     {
-        private NetworkStream stream; //Stream za slanje i primanje poruka
+        public IMyNetworkStream MyStream { get; set; }
 
         public Client()
         {
+            MyStream = new MyNetworkStream();
             Start();
         }
 
-        public NetworkStream Stream { get => stream; set => stream = value; }
 
         // Funkcija pokrece tcp clienta 
         private void Start()
         {
-            
-            TcpClient client = new TcpClient("127.0.0.1", 8000);
+            TcpClient client = new TcpClient("127.0.0.1", 1434);
             Console.WriteLine("Distribtuion server connected");
-            stream = client.GetStream();
+            MyStream.Stream = client.GetStream();
         }
         // Funkcija sluzi za slanje poruka preko streama
         public bool Send(string msg, string code)
@@ -35,7 +34,7 @@ namespace Consumer
                     code += ";";
                 }
                 byte[] data = Encoding.ASCII.GetBytes(code + msg);
-                stream.Write(data, 0, data.Length);
+                MyStream.Write(data, 0, data.Length);
                 return true;
             }
             catch (Exception e)
@@ -51,7 +50,7 @@ namespace Consumer
             try
             {
                 byte[] buffer = new byte[1024];
-                stream.Read(buffer, 0, 1024);
+                MyStream.Read(buffer);
                 return Encoding.ASCII.GetString(buffer, 0, buffer.Length);
             } catch (Exception e)
             {
@@ -64,7 +63,7 @@ namespace Consumer
         {
             try
             {
-                StreamWriter w = new StreamWriter(path,append:true);
+                using  StreamWriter w = new StreamWriter(path,append:true);
                 w.WriteLine(msg);
                 w.Close();
                 return true;

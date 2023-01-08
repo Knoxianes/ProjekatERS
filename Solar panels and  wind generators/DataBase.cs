@@ -6,16 +6,17 @@ using System.Diagnostics;
 
 namespace Solar_panels_and__wind_generators
 {
-    class DataBase
+    public class DataBase
     {
-        private SqlConnection connection;
+
+        public IMySqlConnection MyConnection { get; set; }
 
         public DataBase()
         {
+            MyConnection = new MySqlConnection();
             StartDB();
         }
 
-        public SqlConnection Connection { get => connection; set => connection = value; }
 
 
         //Funkcija se povezuje sa bazom podataka i pravi novu tabelu
@@ -23,9 +24,8 @@ namespace Solar_panels_and__wind_generators
         {
             string relativePath = @"..\..\Database1.mdf";
             string absolutePath = Path.GetFullPath(relativePath);
-            Console.WriteLine(absolutePath);
             string connectionString = String.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True", absolutePath);
-            connection = new SqlConnection(connectionString);
+            MyConnection.Connection = new SqlConnection(connectionString);
             var broj_instanci = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName).Length; // Nalazi broj instanci programa
             
             if(broj_instanci <= 1) // Ako je broj instanci 1 ili manji od 1 pokrece brisanje i pravljenje nove tabele u bazi
@@ -37,18 +37,20 @@ namespace Solar_panels_and__wind_generators
         }
 
         // Funkcija salje komandu u bazu
-        public void SendCommand(string command)
+        public bool SendCommand(string command)
         {
             try
             {
-                connection.Open();
-                SqlCommand tmp = new SqlCommand(command, connection);
+                MyConnection.Open();
+                SqlCommand tmp = new SqlCommand(command, MyConnection.Connection);
                 tmp.ExecuteNonQuery();
-                connection.Close();
+                MyConnection.Close();
+                return true;
             }catch (Exception e)
             {
                 Console.WriteLine("Komanda neuspesno poslata u bazu podataka! "  + e);
-                connection.Close();
+                MyConnection.Close();
+                return false;
             }
         }
     }

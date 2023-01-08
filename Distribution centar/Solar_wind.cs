@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Distribution_centar
 {
-    class Solar_wind
+    public class Solar_wind
     {
         private double snaga;
 

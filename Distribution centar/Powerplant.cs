@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Distribution_centar
 {
-    class Powerplant
+    public class Powerplant
     {
         private double snaga;
         private double procenat_rada;

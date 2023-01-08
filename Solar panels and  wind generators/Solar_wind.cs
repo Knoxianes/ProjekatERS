@@ -1,10 +1,16 @@
 ﻿using System;
-using System.Configuration;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Common.CommandTrees;
+using System.Text;
 using System.Timers;
+using System.Data.SqlClient;
+using System.IO;
+using System.Configuration;
 
 namespace Solar_panels_and__wind_generators
 {
-    class Solar_wind
+    public class Solar_wind
     {
         private Solar_Panel panel;
         private Wind_Generator generator;
@@ -52,7 +58,7 @@ namespace Solar_panels_and__wind_generators
             client.Send((panel.Snaga_panela + generator.Snaga_generatora).ToString(), "2"); // Slanje snagu solarnih panela i vetro generatora serveru
             string vreme = DateTime.Now.ToString("HH:mm:ss tt");
             var command = "insert into Solar_Wind (Energija_Sunca,Energija_Vetra,Panel,Generator,Timestamp) values ('" + Math.Round(sunce,2) + "', '" + Math.Round(vetar,2) + "', '" + Math.Round(panel.Snaga_panela,2) + "', '" + Math.Round(generator.Snaga_generatora,2) + "', '" + vreme + "')";
-           // db.SendCommand(command); // Slanje komande u bazu podataka 
+            db.SendCommand(command); // Slanje komande u bazu podataka 
         }
     }
 }

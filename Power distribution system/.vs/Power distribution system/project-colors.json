@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2ae2cb06-f264-4db0-8103-53df73ae3b3d": {
+      "ProjectGuid": "2ae2cb06-f264-4db0-8103-53df73ae3b3d",
+      "DisplayName": "Consumer",
+      "ColorIndex": 0
+    },
+    "8a857193-a64f-4c93-a7d3-49cae2d8a4c8": {
+      "ProjectGuid": "8a857193-a64f-4c93-a7d3-49cae2d8a4c8",
+      "DisplayName": "Solar panels and  wind generators",
+      "ColorIndex": 1
+    },
+    "9ea1fd88-9992-4289-b162-8e3c851a28fe": {
+      "ProjectGuid": "9ea1fd88-9992-4289-b162-8e3c851a28fe",
+      "DisplayName": "Distribution centar",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "95198d6b-f7b0-405d-8a35-b588f4514afd": {
+      "ProjectGuid": "95198d6b-f7b0-405d-8a35-b588f4514afd",
+      "DisplayName": "Power distribution system",
+      "ColorIndex": 3
+    },
+    "de698fb9-63cf-43fd-acfb-30942e2150c8": {
+      "ProjectGuid": "de698fb9-63cf-43fd-acfb-30942e2150c8",
+      "DisplayName": "PowerDistributionSystemTests",
+      "ColorIndex": 4
+    },
+    "139a752d-a71c-4d5d-b21c-3aa0464449e5": {
+      "ProjectGuid": "139a752d-a71c-4d5d-b21c-3aa0464449e5",
+      "DisplayName": "Hydroelectric power plant",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

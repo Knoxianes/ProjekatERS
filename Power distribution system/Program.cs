@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Power_distribution_system
 {
@@ -10,6 +6,7 @@ namespace Power_distribution_system
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

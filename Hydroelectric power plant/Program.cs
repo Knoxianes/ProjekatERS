@@ -14,10 +14,10 @@ namespace Hydroelectric_power_plant
             }
             Console.WriteLine("Elektrana krece sa radom!");
 
-            powerplant.Client.Send(powerplant.Snaga.ToString(), "1"); //Salje se serveru snaga elektrane sa kod 1 sto oznacava prvo pokretanje
+            powerplant.Client.Send(powerplant.Snaga.ToString(),"1"); //Salje se serveru snaga elektrane sa kod 1 sto oznacava prvo pokretanje
             while (true) // While petlja koja ce da prima poruke od servera i da updejtuje procenat rada elektrane
             {
-                var msg = powerplant.Client.Recieve().Split(';'); // primanje poruke od servera i delje iste na delove
+                var msg = powerplant.Client.Recieve().Split(";"); // primanje poruke od servera i delje iste na delove
                 try
                 {
                     if (int.Parse(msg[0]) == 2)
@@ -42,21 +42,21 @@ namespace Hydroelectric_power_plant
                 {
 
                 }
-
-
+                
+               
 
             }
         }
         //Funkcija koja updejtuje procenat rada elektrane i upisuje podatke u bazu podataka
-        static void PowerPlant_Update(double nova_snaga, Powerplant powerplant)
+        static void PowerPlant_Update(double nova_snaga,Powerplant powerplant)
         {
-            Console.WriteLine("Potrebno je: " + Math.Round(nova_snaga, 2) + " energije!");
+            Console.WriteLine("Potrebno je: " + Math.Round(nova_snaga,2) + " energije!");
             powerplant.Trenutna_proizvodnja = nova_snaga;
             powerplant.UpdateProcenat(); // Update procenta rada elektrane
-            Console.WriteLine("Elektrana sada radi na: " + Math.Round(powerplant.Procenat_rada, 1) + "%");
+            Console.WriteLine("Elektrana sada radi na: " + Math.Round(powerplant.Procenat_rada,1) + "%");
             string vreme = DateTime.Now.ToString("HH:mm:ss tt");
             var command = "insert into Powerplant (Snaga_elektrane,Procenat_rada,Timestamp) values ('" + Math.Round(powerplant.Trenutna_proizvodnja, 2) + "', '" + Math.Round(powerplant.Procenat_rada, 1) + "', '" + vreme + "')";
-           // powerplant.Db.SendCommand(command); // Slanje komande bazi podataka da upise podatke vezane za update rada elektrane
+            powerplant.Db.SendCommand(command); // Slanje komande bazi podataka da upise podatke vezane za update rada elektrane
             powerplant.Client.Send(powerplant.Procenat_rada.ToString(), "2"); // Slanje serveru procenat rada elektrane
         }
     }

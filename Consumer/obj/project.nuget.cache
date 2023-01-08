@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "GJXNw6CJRbtmXEan5YMY9KtRAMcoy4HFYQfG++LrkzvBtBdwKXN3RqCOnoxVtoiINb3vDgtuJe8VqkfDsQypsg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\ippdotnetsdkforquickbooksapiv3.sv\\7.5.1\\ippdotnetsdkforquickbooksapiv3.sv.7.5.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'IppDotNetSdkForQuickBooksApiV3.SV 7.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "IppDotNetSdkForQuickBooksApiV3.SV",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

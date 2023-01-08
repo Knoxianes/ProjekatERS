@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Distribution_centar
 {
-    class Potrosac
+    public class Potrosac
     {
         private int vati;
         private double cena_struje;

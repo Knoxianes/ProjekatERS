@@ -1,0 +1,232 @@
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.exe
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.deps.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.dev.json
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.AssemblyReference.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfoInputs.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfo.cs
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CoreCompileInputs.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.genruntimeconfig.cache
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.AssemblyReference.cache
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfoInputs.cache
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfo.cs
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CoreCompileInputs.cache
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.exe
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.deps.json
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.json
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.dev.json
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.genruntimeconfig.cache
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\zlatk\OneDrive\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.exe
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.deps.json
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.json
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.dev.json
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.AssemblyReference.cache
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfoInputs.cache
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfo.cs
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CoreCompileInputs.cache
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\Zlatko\Desktop\Projekat\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.genruntimeconfig.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll.config
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\DevDefined.OAuth.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Core.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Data.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.DataService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Diagnostics.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.EntitlementService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Exception.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.GlobalTaxService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.LinqExtender.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.OAuth2PlatformClient.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.QueryFilter.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.ReportService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Retry.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Security.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Utility.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.WebHooksService.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\IppDotNetSdkForQuickBooksApiV3.dll
+C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.exe
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll.config
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.deps.json
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.json
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.dev.json
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\DevDefined.OAuth.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Core.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Data.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.DataService.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Diagnostics.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.EntitlementService.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Exception.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.GlobalTaxService.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.LinqExtender.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.OAuth2PlatformClient.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.QueryFilter.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.ReportService.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Retry.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Security.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Utility.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.WebHooksService.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\IppDotNetSdkForQuickBooksApiV3.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfo.cs
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\admin\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.genruntimeconfig.cache
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.exe
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll.config
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.deps.json
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.json
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.dev.json
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\DevDefined.OAuth.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Core.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Data.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.DataService.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Diagnostics.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.EntitlementService.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Exception.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.GlobalTaxService.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.LinqExtender.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.OAuth2PlatformClient.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.QueryFilter.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.ReportService.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Retry.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Security.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.Utility.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Intuit.Ipp.WebHooksService.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\IppDotNetSdkForQuickBooksApiV3.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.AssemblyReference.cache
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfoInputs.cache
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfo.cs
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CoreCompileInputs.cache
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.CopyComplete
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
+C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.genruntimeconfig.cache

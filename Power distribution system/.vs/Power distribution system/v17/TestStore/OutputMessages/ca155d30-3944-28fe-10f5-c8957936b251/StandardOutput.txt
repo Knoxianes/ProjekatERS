@@ -1,0 +1,39 @@
+Komanda neuspesno poslata u bazu podataka! System.Data.SqlClient.SqlException (0x80131904): An attempt to attach an auto-named database for file C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\PowerDistributionSystemTests\bin\Database1.mdf failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Solar_panels_and__wind_generators.MySqlConnection.Open() in C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\MySqlConnection.cs:line 24
+   at Solar_panels_and__wind_generators.DataBase.SendCommand(String command) in C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\DataBase.cs:line 44
+ClientConnectionId:deafc4a6-a2be-4883-9bd4-8b3f0400c3c2
+Error Number:15350,State:1,Class:14
+Komanda neuspesno poslata u bazu podataka! System.Data.SqlClient.SqlException (0x80131904): An attempt to attach an auto-named database for file C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\PowerDistributionSystemTests\bin\Database1.mdf failed. A database with the same name exists, or specified file cannot be opened, or it is located on UNC share.
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Solar_panels_and__wind_generators.MySqlConnection.Open() in C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\MySqlConnection.cs:line 24
+   at Solar_panels_and__wind_generators.DataBase.SendCommand(String command) in C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\DataBase.cs:line 44
+ClientConnectionId:deafc4a6-a2be-4883-9bd4-8b3f0400c3c2
+Error Number:15350,State:1,Class:14
+Komanda neuspesno poslata u bazu podataka! System.Exception: Exception of type 'System.Exception' was thrown.
+   at Moq.Behaviors.ThrowException.Execute(Invocation invocation) in C:\projects\moq4\src\Moq\Behaviors\ThrowException.cs:line 22
+   at Moq.MethodCall.ExecuteCore(Invocation invocation) in C:\projects\moq4\src\Moq\MethodCall.cs:line 110
+   at Moq.Setup.Execute(Invocation invocation) in C:\projects\moq4\src\Moq\Setup.cs:line 84
+   at Moq.FindAndExecuteMatchingSetup.Handle(Invocation invocation, Mock mock) in C:\projects\moq4\src\Moq\Interception\InterceptionAspects.cs:line 95
+   at Moq.Mock.Moq.IInterceptor.Intercept(Invocation invocation) in C:\projects\moq4\src\Moq\Interception\Mock.cs:line 17
+   at Moq.CastleProxyFactory.Interceptor.Intercept(IInvocation underlying) in C:\projects\moq4\src\Moq\Interception\CastleProxyFactory.cs:line 107
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IMySqlConnectionProxy.Open()
+   at Solar_panels_and__wind_generators.DataBase.SendCommand(String command) in C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Solar panels and  wind generators\DataBase.cs:line 44

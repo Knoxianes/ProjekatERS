@@ -5,116 +5,44 @@
       "IppDotNetSdkForQuickBooksApiV3.SV/7.5.1": {
         "type": "package",
         "compile": {
-          "lib/net461/DevDefined.OAuth.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Data.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.DataService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Diagnostics.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.EntitlementService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Exception.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.GlobalTaxService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.LinqExtender.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.QueryFilter.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.ReportService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Retry.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Security.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Utility.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.WebHooksService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Newtonsoft.Json.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net461/DevDefined.OAuth.dll": {},
+          "lib/net461/Intuit.Ipp.Core.dll": {},
+          "lib/net461/Intuit.Ipp.Data.dll": {},
+          "lib/net461/Intuit.Ipp.DataService.dll": {},
+          "lib/net461/Intuit.Ipp.Diagnostics.dll": {},
+          "lib/net461/Intuit.Ipp.EntitlementService.dll": {},
+          "lib/net461/Intuit.Ipp.Exception.dll": {},
+          "lib/net461/Intuit.Ipp.GlobalTaxService.dll": {},
+          "lib/net461/Intuit.Ipp.LinqExtender.dll": {},
+          "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll": {},
+          "lib/net461/Intuit.Ipp.QueryFilter.dll": {},
+          "lib/net461/Intuit.Ipp.ReportService.dll": {},
+          "lib/net461/Intuit.Ipp.Retry.dll": {},
+          "lib/net461/Intuit.Ipp.Security.dll": {},
+          "lib/net461/Intuit.Ipp.Utility.dll": {},
+          "lib/net461/Intuit.Ipp.WebHooksService.dll": {},
+          "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll": {},
+          "lib/net461/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/net461/DevDefined.OAuth.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Data.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.DataService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Diagnostics.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.EntitlementService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Exception.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.GlobalTaxService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.LinqExtender.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.QueryFilter.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.ReportService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Retry.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Security.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.Utility.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Intuit.Ipp.WebHooksService.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/net461/Newtonsoft.Json.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/net461/DevDefined.OAuth.dll": {},
+          "lib/net461/Intuit.Ipp.Core.dll": {},
+          "lib/net461/Intuit.Ipp.Data.dll": {},
+          "lib/net461/Intuit.Ipp.DataService.dll": {},
+          "lib/net461/Intuit.Ipp.Diagnostics.dll": {},
+          "lib/net461/Intuit.Ipp.EntitlementService.dll": {},
+          "lib/net461/Intuit.Ipp.Exception.dll": {},
+          "lib/net461/Intuit.Ipp.GlobalTaxService.dll": {},
+          "lib/net461/Intuit.Ipp.LinqExtender.dll": {},
+          "lib/net461/Intuit.Ipp.OAuth2PlatformClient.dll": {},
+          "lib/net461/Intuit.Ipp.QueryFilter.dll": {},
+          "lib/net461/Intuit.Ipp.ReportService.dll": {},
+          "lib/net461/Intuit.Ipp.Retry.dll": {},
+          "lib/net461/Intuit.Ipp.Security.dll": {},
+          "lib/net461/Intuit.Ipp.Utility.dll": {},
+          "lib/net461/Intuit.Ipp.WebHooksService.dll": {},
+          "lib/net461/IppDotNetSdkForQuickBooksApiV3.dll": {},
+          "lib/net461/Newtonsoft.Json.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {
@@ -133,14 +61,10 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
@@ -196,14 +120,10 @@
           "runtime.native.System.Data.SqlClient.sni": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.1/System.Data.SqlClient.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "related": ".xml"
-          }
+          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
@@ -223,14 +143,10 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
         },
         "runtimeTargets": {
           "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
@@ -242,14 +158,10 @@
       "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp3.0/_._": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp3.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
@@ -651,19 +563,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\S\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
+      "projectUniqueName": "C:\\Users\\S\\Desktop\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
       "projectName": "Hydroelectric power plant",
-      "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\obj\\",
+      "projectPath": "C:\\Users\\S\\Desktop\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
+      "packagesPath": "C:\\Users\\S\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\S\\Desktop\\ProjekatERS\\Hydroelectric power plant\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\S\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -704,8 +616,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -714,7 +625,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -723,7 +634,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'IppDotNetSdkForQuickBooksApiV3.SV 7.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "Package 'IppDotNetSdkForQuickBooksApiV3.SV 7.5.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "IppDotNetSdkForQuickBooksApiV3.SV",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

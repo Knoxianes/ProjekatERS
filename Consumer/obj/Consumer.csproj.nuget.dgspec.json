@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {}
+    "C:\\Users\\S\\Desktop\\ProjekatERS\\Consumer\\Consumer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {
+    "C:\\Users\\S\\Desktop\\ProjekatERS\\Consumer\\Consumer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
+        "projectUniqueName": "C:\\Users\\S\\Desktop\\ProjekatERS\\Consumer\\Consumer.csproj",
         "projectName": "Consumer",
-        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\obj\\",
+        "projectPath": "C:\\Users\\S\\Desktop\\ProjekatERS\\Consumer\\Consumer.csproj",
+        "packagesPath": "C:\\Users\\S\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\S\\Desktop\\ProjekatERS\\Consumer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\S\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

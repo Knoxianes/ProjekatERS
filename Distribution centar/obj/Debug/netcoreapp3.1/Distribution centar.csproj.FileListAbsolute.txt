@@ -171,3 +171,4 @@ C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Distribution centar\obj\Debug\netc
 C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.dll
 C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.pdb
 C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Distribution centar\obj\Debug\netcoreapp3.1\Distribution centar.genruntimeconfig.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Distribution centar\bin\Debug\netcoreapp3.1\Distribution centar.dll.config

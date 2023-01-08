@@ -20,7 +20,7 @@ namespace Consumer
         // Funkcija pokrece tcp clienta 
         private void Start()
         {
-            TcpClient client = new TcpClient("127.0.0.1", 1434);
+            TcpClient client = new TcpClient("127.0.0.1", 8000);
             Console.WriteLine("Distribtuion server connected");
             MyStream.Stream = client.GetStream();
         }

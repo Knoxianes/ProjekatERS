@@ -563,19 +563,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\S\\.nuget\\packages\\": {}
+    "C:\\Users\\strah\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S\\Desktop\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
+      "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
       "projectName": "Hydroelectric power plant",
-      "projectPath": "C:\\Users\\S\\Desktop\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
-      "packagesPath": "C:\\Users\\S\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S\\Desktop\\ProjekatERS\\Hydroelectric power plant\\obj\\",
+      "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
+      "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\S\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -625,7 +630,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
       }
     }
   },

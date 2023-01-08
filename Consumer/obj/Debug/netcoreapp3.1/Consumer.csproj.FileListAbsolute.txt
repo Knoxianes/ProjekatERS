@@ -4,7 +4,6 @@ C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Con
 C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.runtimeconfig.dev.json
 C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.pdb
-C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.csproj.AssemblyReference.cache
 C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.AssemblyInfoInputs.cache
 C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.AssemblyInfo.cs
@@ -97,3 +96,4 @@ C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\C
 C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.dll
 C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.pdb
 C:\Users\Borisa\Desktop\zelic\sss\ProjekatERS\Consumer\obj\Debug\netcoreapp3.1\Consumer.genruntimeconfig.cache
+C:\Users\strah\Documents\GitHub\ProjekatERS\Consumer\bin\Debug\netcoreapp3.1\Consumer.dll.config

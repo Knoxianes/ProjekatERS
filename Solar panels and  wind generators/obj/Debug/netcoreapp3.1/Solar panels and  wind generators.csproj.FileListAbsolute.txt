@@ -4,7 +4,6 @@ C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bi
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.runtimeconfig.dev.json
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.dll
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\bin\Debug\netcoreapp3.1\Solar panels and  wind generators.pdb
-C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.csproj.AssemblyReference.cache
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfoInputs.cache
 C:\Users\strah\Documents\GitHub\ProjekatERS\Solar panels and  wind generators\obj\Debug\netcoreapp3.1\Solar panels and  wind generators.AssemblyInfo.cs

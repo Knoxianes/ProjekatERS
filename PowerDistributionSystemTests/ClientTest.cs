@@ -17,7 +17,6 @@ namespace PowerDistributionSystemTests
         [Test]
         public void Send_ReturnsFalse() 
         {
-
             //Arrange
             string code = "test";
             string msg = "test";

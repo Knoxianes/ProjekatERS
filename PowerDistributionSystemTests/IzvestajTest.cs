@@ -21,7 +21,6 @@ namespace PowerDistributionSystemTests
             int vati = 1;
             int cena = 1;
 
-
             //Act
             izvestaj.Add(vati, cena);
 
@@ -42,7 +41,6 @@ namespace PowerDistributionSystemTests
             int id = 1;
             tmp.Id = id;
             izvestaj.Potrosaci.Add(tmp);
-
 
             //Act
             izvestaj.Remove(id);

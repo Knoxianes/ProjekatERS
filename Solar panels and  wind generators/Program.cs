@@ -19,7 +19,6 @@ namespace Solar_panels_and__wind_generators
             Korisnik_ui(solar_wind.Panel, solar_wind.Generator, solar_wind.Db);
             solar_wind.Ponavljanje();
             while (true) { }
-
         }
        static public void Korisnik_ui(Solar_Panel s, Wind_Generator g, DataBase db)
         {

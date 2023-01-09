@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net6.0": {
       "EntityFramework/6.4.4": {
         "type": "package",
         "dependencies": {
@@ -149,7 +149,7 @@
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
-      "System.Data.SqlClient/4.8.1": {
+      "System.Data.SqlClient/4.8.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -278,6 +278,53 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "Consumer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Consumer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Consumer.dll": {}
+        }
+      },
+      "Distribution centar/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EntityFramework": "6.4.4"
+        },
+        "compile": {
+          "bin/placeholder/Distribution centar.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Distribution centar.dll": {}
+        }
+      },
+      "Hydroelectric power plant/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Hydroelectric power plant.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Hydroelectric power plant.dll": {}
+        }
+      },
+      "Solar panels and  wind generators/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "System.Data.SqlClient": "4.8.5"
+        },
+        "compile": {
+          "bin/placeholder/Solar panels and  wind generators.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Solar panels and  wind generators.dll": {}
         }
       }
     }
@@ -700,10 +747,10 @@
         "version.txt"
       ]
     },
-    "System.Data.SqlClient/4.8.1": {
-      "sha512": "HKLykcv6eZLbLnSMnlQ6Os4+UAmFE+AgYm92CTvJYeTOBtOYusX3qu8OoGhFrnKZax91UcLcDo5vPrqvJUTSNQ==",
+    "System.Data.SqlClient/4.8.5": {
+      "sha512": "fRqxut4lrndPHrXD+ht1XRmCL3obuKldm4XjCRYS9p5f7FSR7shBxAwTkDrpFMsHC9BhNgjjmUtiIjvehn5zkg==",
       "type": "package",
-      "path": "system.data.sqlclient/4.8.1",
+      "path": "system.data.sqlclient/4.8.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -780,7 +827,7 @@
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.xml",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.xml",
-        "system.data.sqlclient.4.8.1.nupkg.sha512",
+        "system.data.sqlclient.4.8.5.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1017,11 +1064,34 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Consumer/1.0.0": {
+      "type": "project",
+      "path": "../Consumer/Consumer.csproj",
+      "msbuildProject": "../Consumer/Consumer.csproj"
+    },
+    "Distribution centar/1.0.0": {
+      "type": "project",
+      "path": "../Distribution centar/Distribution centar.csproj",
+      "msbuildProject": "../Distribution centar/Distribution centar.csproj"
+    },
+    "Hydroelectric power plant/1.0.0": {
+      "type": "project",
+      "path": "../Hydroelectric power plant/Hydroelectric power plant.csproj",
+      "msbuildProject": "../Hydroelectric power plant/Hydroelectric power plant.csproj"
+    },
+    "Solar panels and  wind generators/1.0.0": {
+      "type": "project",
+      "path": "../Solar panels and  wind generators/Solar panels and  wind generators.csproj",
+      "msbuildProject": "../Solar panels and  wind generators/Solar panels and  wind generators.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "EntityFramework >= 6.4.4"
+    "net6.0": [
+      "Consumer >= 1.0.0",
+      "Distribution centar >= 1.0.0",
+      "Hydroelectric power plant >= 1.0.0",
+      "Solar panels and  wind generators >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1030,27 +1100,40 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj",
-      "projectName": "Distribution centar",
-      "projectPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj",
+      "projectUniqueName": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
+      "projectName": "PowerDistributionSystemTests",
+      "projectPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
       "packagesPath": "C:\\Users\\S\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\obj\\",
+      "outputPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\S\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {
+              "projectPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj"
+            },
+            "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj": {
+              "projectPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj"
+            },
+            "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj": {
+              "projectPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj"
+            },
+            "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
+              "projectPath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1060,14 +1143,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
-        "dependencies": {
-          "EntityFramework": {
-            "target": "Package",
-            "version": "[6.4.4, )"
-          }
-        },
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
@@ -1078,11 +1155,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }

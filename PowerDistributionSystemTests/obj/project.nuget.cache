@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JxRZvWadC0UsV/bZweVcRqZuC9hgn7+fpNF6SvERAZOZthn7r+9LhmIuBBrrpNpFsmaDAuJkhUqkYh44MGzN4w==",
+  "dgSpecHash": "irXgYDRUu06F5ar5DTeP7GFaAtgGPeNFo0knYw/NZAg2KMuLyVOZSfR8OzQg8UGyG+PzyRyFIWj4uRRF7AesZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
+  "projectFilePath": "C:\\Users\\S\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\S\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

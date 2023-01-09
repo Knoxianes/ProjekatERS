@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj": {}
+    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {
+    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
         "projectName": "Consumer",
-        "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
-        "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Consumer\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +51,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,25 +61,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj": {
+    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj",
         "projectName": "Distribution centar",
-        "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj",
-        "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,7 +116,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -132,25 +126,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj": {
+    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
         "projectName": "Hydroelectric power plant",
-        "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
-        "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -191,7 +181,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -200,25 +191,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj": {
+    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
         "projectName": "PowerDistributionSystemTests",
-        "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
-        "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\PowerDistributionSystemTests.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\PowerDistributionSystemTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -232,17 +219,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {
-                "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj"
+              "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj": {
+                "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Consumer\\Consumer.csproj"
               },
-              "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj": {
-                "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj"
+              "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj": {
+                "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Distribution centar\\Distribution centar.csproj"
               },
-              "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj": {
-                "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj"
+              "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj": {
+                "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Hydroelectric power plant\\Hydroelectric power plant.csproj"
               },
-              "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
-                "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj"
+              "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
+                "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj"
               }
             }
           }
@@ -256,35 +243,59 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
+    "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
         "projectName": "Solar panels and  wind generators",
-        "projectPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
-        "packagesPath": "C:\\Users\\strah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\strah\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\Solar panels and  wind generators.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\ProjekatERS\\Solar panels and  wind generators\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\strah\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -329,7 +340,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -338,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

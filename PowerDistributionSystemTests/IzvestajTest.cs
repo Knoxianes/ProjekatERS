@@ -52,6 +52,7 @@ namespace PowerDistributionSystemTests
         [Test]
         public void Izracunaj_Izvestaj_ReturnsTrue()
         {
+
             //Arrange
             Izvestaj i = new Izvestaj();
 

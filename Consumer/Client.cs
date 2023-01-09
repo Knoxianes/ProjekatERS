@@ -47,6 +47,7 @@ namespace Consumer
         // Funkcija sluzi za primanje poruka preko strima
         public string Recieve()
         {
+
             try
             {
                 byte[] buffer = new byte[1024];
@@ -61,6 +62,7 @@ namespace Consumer
         //Funkcija pise u fajl sa odredjenim pathom
         public bool WriteToFile(string msg,string path)
         {
+
             try
             {
                 using  StreamWriter w = new StreamWriter(path,append:true);

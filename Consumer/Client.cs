@@ -27,6 +27,7 @@ namespace Consumer
         // Funkcija sluzi za slanje poruka preko streama
         public bool Send(string msg, string code)
         {
+
             try
             {
                 if (code != "")
